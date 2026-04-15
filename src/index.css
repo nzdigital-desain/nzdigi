@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap');
+
+@layer base {
+  :root {
+    --background: 30 25% 96%;
+    --foreground: 30 10% 20%;
+
+    --card: 30 20% 94%;
+    --card-foreground: 30 10% 20%;
+
+    --popover: 30 25% 96%;
+    --popover-foreground: 30 10% 20%;
+
+    --primary: 30 30% 35%;
+    --primary-foreground: 30 25% 96%;
+
+    --secondary: 30 15% 88%;
+    --secondary-foreground: 30 10% 25%;
+
+    --muted: 30 12% 90%;
+    --muted-foreground: 30 8% 50%;
+
+    --accent: 35 40% 55%;
+    --accent-foreground: 30 25% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 30 30% 35%;
+
+    --radius: 0.5rem;
+
+    --wedding-cream: 35 30% 92%;
+    --wedding-sage: 140 15% 45%;
+    --wedding-sage-light: 140 12% 75%;
+    --wedding-gold: 38 60% 55%;
+    --wedding-gold-light: 38 50% 80%;
+    --wedding-brown: 25 25% 30%;
+    --wedding-brown-light: 25 15% 50%;
+    --wedding-overlay: 30 10% 15%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lora', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-body {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-serif {
+    font-family: 'Lora', serif;
+  }
+  .text-wedding-gold {
+    color: hsl(var(--wedding-gold));
+  }
+  .text-wedding-sage {
+    color: hsl(var(--wedding-sage));
+  }
+  .text-wedding-brown {
+    color: hsl(var(--wedding-brown));
+  }
+  .text-wedding-brown-light {
+    color: hsl(var(--wedding-brown-light));
+  }
+  .bg-wedding-cream {
+    background-color: hsl(var(--wedding-cream));
+  }
+  .bg-wedding-sage {
+    background-color: hsl(var(--wedding-sage));
+  }
+  .bg-wedding-sage-light {
+    background-color: hsl(var(--wedding-sage-light));
+  }
+  .bg-wedding-gold {
+    background-color: hsl(var(--wedding-gold));
+  }
+  .bg-wedding-gold-light {
+    background-color: hsl(var(--wedding-gold-light));
+  }
+  .bg-wedding-overlay {
+    background-color: hsl(var(--wedding-overlay) / 0.5);
+  }
+  .border-wedding-gold {
+    border-color: hsl(var(--wedding-gold));
+  }
+  .border-wedding-sage {
+    border-color: hsl(var(--wedding-sage));
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px hsl(var(--wedding-gold) / 0.3); }
+  50% { box-shadow: 0 0 20px hsl(var(--wedding-gold) / 0.6); }
+}
