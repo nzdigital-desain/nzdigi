@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/pages/weding-yuni/lib/supabase";
 
 const zoomIn = {
   hidden: { opacity: 0, scale: 0.6 },

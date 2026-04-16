@@ -1,34 +1,35 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import { HelmetProvider } from "react-helmet-async";
+import WedingYuni from "@/pages/weding-yuni/pages/Index";
+import SundaPage from "@/pages/template/pages/Index";
+import LandingPage from "@/LandingPage";
+const App = () => {
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          {/* Halaman Undangan Yuni */}
+          <Route path="/wedingyuni" element={<WedingYuni />} />
 
-const queryClient = new QueryClient();
+          {/* Halaman Template Sunda */}
+          <Route path="/sunda" element={<SundaPage />} />
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-
-      {/* 1. Background pembungkus untuk layar desktop */}
-      <div className="min-h-screen w-full bg-slate-100 flex justify-center items-start overflow-x-hidden">
-        {/* 2. Container utama yang dikunci rasionya (Max lebar 450px - 500px) */}
-        <div className="w-full max-w-[480px] min-h-screen bg-white shadow-2xl relative overflow-x-hidden">
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </div>
-      </div>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+          {/* Halaman Utama (Landing Page NZDIGI) */}
+          <Route
+            path="/"
+            element={
+              <div className="flex items-center justify-center h-screen bg-slate-100">
+                <h1 className="text-2xl font-serif">
+                  NZDIGI Digital Invitation
+                </h1>
+              </div>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
+  );
+};
 
 export default App;
