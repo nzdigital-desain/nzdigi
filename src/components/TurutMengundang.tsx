@@ -20,11 +20,11 @@ const TurutMengundang = () => {
       }}
     >
       {/* ✅ overlay SAGE (bukan putih lagi) */}
-      <div className="absolute inset-0 bg-[#7a8f77]/50 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-[#F9D0CD]/50 backdrop-blur-[2px]" />
 
       <div className="relative z-10 max-w-md mx-auto text-center">
         <motion.p
-          className="font-body text-xs leading-relaxed mb-6 text-[#f0ebe0]"
+          className="font-body text-xs leading-relaxed mb-6 text-[#021A54]"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"
@@ -38,7 +38,7 @@ const TurutMengundang = () => {
         </motion.p>
 
         <motion.h4
-          className="font-display text-base mb-4 uppercase tracking-wider text-white"
+          className="font-display text-base mb-4 uppercase tracking-wider text-[#021A54]"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"
@@ -49,7 +49,7 @@ const TurutMengundang = () => {
         </motion.h4>
 
         <motion.div
-          className="text-left font-body text-[11px] leading-relaxed mb-8 text-[#f0ebe0]"
+          className="text-left font-body text-[11px] leading-relaxed mb-8 text-[#021A54]"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"
@@ -72,7 +72,7 @@ const TurutMengundang = () => {
         </motion.div>
 
         <motion.h2
-          className="font-script text-4xl text-white"
+          className="font-script text-4xl text-[#021A54]"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"

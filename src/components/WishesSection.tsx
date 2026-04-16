@@ -97,9 +97,9 @@ const WishesSection = () => {
       }}
     >
       <motion.div className="max-w-md mx-auto" variants={zoomIn}>
-        <div className="rounded-[30px] p-6 bg-white/80 border-2 border-[#5c6b52]">
+        <div className="rounded-[30px] p-6 bg-[#FFCEE3]/80 border-2 border-[#FFCEE3]">
           {/* ================= WISH ================= */}
-          <h3 className="text-center text-xl mb-4 text-[#5c6b52]">Your Wish</h3>
+          <h3 className="text-center text-xl mb-4 text-[#021A54]">Your Wish</h3>
 
           <form onSubmit={handleWish} className="space-y-3 mb-6">
             <input
@@ -116,7 +116,7 @@ const WishesSection = () => {
               className="w-full p-3 rounded"
             />
 
-            <button className="w-full py-2 bg-[#5c6b52] text-white rounded-full">
+            <button className="w-full py-2 bg-[#021A54] text-white rounded-full">
               Kirim Ucapan
             </button>
           </form>
@@ -126,14 +126,14 @@ const WishesSection = () => {
             {wishes.map((w, i) => (
               <div key={i} className="border-b pb-2">
                 <p className="font-semibold">{w.name}</p>
-                <p className="text-xs text-gray-500">{w.attendance}</p>
+                <p className="text-xs text-[#021A54]-500">{w.attendance}</p>
                 <p>{w.message}</p>
               </div>
             ))}
           </div>
 
           {/* ================= RSVP ================= */}
-          <h3 className="text-center text-xl mb-6 text-[#5c6b52]">
+          <h3 className="text-center text-xl mb-6 text-[#021A54]">
             Konfirmasi Kehadiran
           </h3>
 
@@ -165,7 +165,7 @@ const WishesSection = () => {
 
             <button
               onClick={handleWanita}
-              className="w-full mt-3 py-2 bg-[#5c6b52] text-white rounded-full"
+              className="w-full mt-3 py-2 bg-[#021A54] text-white rounded-full"
             >
               RSVP Wanita
             </button>
@@ -199,7 +199,7 @@ const WishesSection = () => {
 
             <button
               onClick={handlePria}
-              className="w-full mt-3 py-2 bg-[#5c6b52] text-white rounded-full"
+              className="w-full mt-3 py-2 bg-[#021A54] text-white rounded-full"
             >
               RSVP Pria
             </button>

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const zoomIn = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 1.8 },
   visible: (delay: number) => ({
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.6, delay },
+    transition: { duration: 0.8, delay },
   }),
 };
 
@@ -13,21 +13,21 @@ const EventSection = () => {
   const events = [
     {
       title: "Akad Nikah",
-      date: "Sabtu, 11 Oktober 2025",
+      date: "Senin, 22 Juni 2026",
       time: "Pukul 10.00 WIB - Selesai",
       location:
-        "Lapang Volly Madrasah Sirojul Aulad\nKp. Cikareo RT 03/07, Desa Parakansalak,\nKec. Parakansalak, Kab. Sukabumi",
-      mapUrl: "https://maps.app.goo.gl/3hskvnodDd5Wg5VWA",
-      bg: "/images/gallery-5.jpg",
+        "Rumah Mempelai Wanita\nKp. Pasir Awi RT 11/03, Desa Palasari Girang Kec. Kalapanunggal, Kab. Sukabumi",
+      mapUrl: "https://maps.app.goo.gl/QBiD9bCAMoWksqD5A",
+      bg: "/images/gallery-1.jpg",
     },
     {
       title: "Resepsi",
-      date: "Sabtu, 11 Oktober 2025",
-      time: "Pukul 11.00 WIB - Selesai",
+      date: "Senin, 22 Juni 2026",
+      time: "Pukul 10.00 WIB - Selesai",
       location:
-        "Lapang Volly Madrasah Sirojul Aulad\nKp. Cikareo RT 03/07, Desa Parakansalak,\nKec. Parakansalak, Kab. Sukabumi",
-      mapUrl: "https://maps.app.goo.gl/3hskvnodDd5Wg5VWA",
-      bg: "/images/gallery-5.jpg",
+        "Rumah Mempelai Wanita\nKp. Pasir Awi RT 11/03, Desa Palasari Girang Kec. Kalapanunggal, Kab. Sukabumi",
+      mapUrl: "https://maps.app.goo.gl/QBiD9bCAMoWksqD5A",
+      bg: "/images/gallery-1.jpg",
     },
   ];
 
@@ -35,7 +35,7 @@ const EventSection = () => {
     <section
       id="event"
       className="py-20 px-6 flex justify-center"
-      style={{ backgroundColor: "#7a8f77" }}
+      style={{ backgroundColor: "#efb1c0d2" }}
     >
       <div className="w-full max-w-md space-y-6">
         {events.map((event, index) => (

@@ -10,7 +10,7 @@ const FooterSection = () => {
     <section
       className="py-14 px-6"
       style={{
-        backgroundColor: "#6f806f", // 🌿 sage solid (sesuai gambar)
+        backgroundColor: "#F9D0CD", // 🌿 sage solid (sesuai gambar)
       }}
     >
       <motion.div
@@ -21,7 +21,7 @@ const FooterSection = () => {
         viewport={{ once: true }}
       >
         {/* TEXT */}
-        <p className="text-sm text-white/90 mb-6 tracking-wide">
+        <p className="text-sm text-[#021A54]/90 mb-6 tracking-wide">
           Made With Love By
         </p>
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const WEDDING_DATE = new Date("2026-10-11T10:00:00+07:00").getTime();
+const WEDDING_DATE = new Date("2026-06-22T10:00:00+07:00").getTime();
 
 const zoomIn = {
   hidden: { opacity: 0, scale: 0.6 },
@@ -54,7 +54,7 @@ const QuranVerse = () => {
       {/* ornament bawah */}
       <div className="absolute bottom-0 w-full">
         <img
-          src="/images/ornament-bottom.png"
+          src="/images/ornament.png"
           className="w-full object-cover opacity-90"
         />
       </div>
@@ -68,14 +68,14 @@ const QuranVerse = () => {
           whileInView="visible"
           custom={0}
         >
-          <span className="text-5xl text-white font-serif">I</span>
-          <div className="w-[1px] h-12 bg-white/70"></div>
-          <span className="text-5xl text-white font-serif">A</span>
+          <span className="text-5xl text-[#550000] font-serif">I</span>
+          <div className="w-[1px] h-12 bg-[#550000]/70"></div>
+          <span className="text-5xl text-[#550000] font-serif">A</span>
         </motion.div>
 
         {/* AYAT */}
         <motion.p
-          className="text-lg leading-loose text-white mb-6"
+          className="text-lg leading-loose text-[#550000] mb-6"
           dir="rtl"
           variants={zoomIn}
           initial="hidden"
@@ -89,7 +89,7 @@ const QuranVerse = () => {
 
         {/* TERJEMAH */}
         <motion.p
-          className="text-sm leading-relaxed text-white/90 italic mb-6"
+          className="text-sm leading-relaxed text-[#550000]/90 italic mb-6"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"
@@ -104,7 +104,7 @@ const QuranVerse = () => {
 
         {/* SUMBER */}
         <motion.p
-          className="text-sm text-white/80 mb-10"
+          className="text-sm text-[#550000]/80 mb-10"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"
@@ -124,7 +124,7 @@ const QuranVerse = () => {
           {units.map((unit) => (
             <div
               key={unit.label}
-              className="bg-white/90 text-[#5c6b52] rounded-2xl px-4 py-3 w-[70px]"
+              className="bg-[#FFC4C4]/90 text-[#6E1A37] rounded-2xl px-4 py-3 w-[70px]"
             >
               <motion.p
                 key={unit.value}
@@ -141,9 +141,9 @@ const QuranVerse = () => {
 
         {/* BUTTON */}
         <motion.a
-          href="https://www.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Icha+%26+Andri&dates=20251011T030000Z%2F20251011T150000Z"
+          href="https://www.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Yuni+%26+....&dates=20260622T030000Z%2F20260622T150000Z"
           target="_blank"
-          className="inline-block bg-white text-[#5c6b52] px-6 py-3 rounded-full text-sm shadow-md"
+          className="inline-block bg-[#FFC4C4] text-[#6E1A37] px-6 py-3 rounded-full text-sm shadow-md"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"

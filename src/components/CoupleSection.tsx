@@ -27,14 +27,14 @@ const CoupleSection = () => {
   return (
     <section
       id="couple"
-      className="min-h-[150vh] py-24 px-6 relative flex items-center justify-center overflow-hidden bg-[url('/images/16-2-scaled-1.jpg')] bg-cover bg-center"
+      className="min-h-[150vh] py-24 px-6 relative flex items-center justify-center overflow-hidden bg-[url('/images/gallery-3.jpg')] bg-cover bg-center"
     >
       {/* OVERLAY SAGE TIPIS */}
-      <div className="absolute inset-0 bg-[#e3999d]/30" />
+      <div className="absolute inset-0 bg-[#550000]/20" />
 
       {/* OVAL HIJAU DALAM */}
       <div className="absolute inset-0 flex items-center justify-center z-0">
-        <div className="w-[90%] max-w-md h-[85%] bg-[#7f8f7a]/80 backdrop-blur-sm border border-white/30 shadow-2xl rounded-[999px/400px]" />
+        <div className="w-[90%] max-w-md h-[85%] bg-[#FFC4C4]/80 backdrop-blur-sm border border-white/20 shadow-2xl rounded-[999px/400px]" />
       </div>
       {/* ORNAMENT BAWAH */}
       <div className="absolute bottom-0 w-full z-0">
@@ -45,7 +45,7 @@ const CoupleSection = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-md mx-auto text-center px-8 py-16 text-white">
+      <div className="relative z-10 max-w-md mx-auto text-center px-8 py-16 text-[#550000]">
         {/* BISMILLAH */}
         <motion.p
           className="text-lg mb-4"
@@ -60,7 +60,7 @@ const CoupleSection = () => {
 
         {/* TEXT */}
         <motion.p
-          className="text-sm leading-relaxed mb-10 text-white/90"
+          className="text-sm leading-relaxed mb-10 text-[#550000]/90"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"
@@ -82,26 +82,26 @@ const CoupleSection = () => {
         >
           <div className="w-40 h-52 mx-auto rounded-[100px] overflow-hidden shadow-xl border border-white/50 mb-4">
             <img
-              src="/images/bride.jpeg"
+              src="/images/WhatsApp Image 2026-04-16 at 09.46.07.jpeg"
               className="w-full h-full object-cover"
             />
           </div>
 
-          <h3 className="text-2xl mb-2 font-serif">cewe</h3>
+          <h3 className="text-2xl mb-2 font-serif text-[#550000]">cewe</h3>
 
-          <p className="text-sm mb-2 text-white/80">
+          <p className="text-sm mb-2 text-[#550000]/80">
             Putri Pertama dari <br />
             Bapak <br />& Ibu
           </p>
 
-          <p className="text-xs flex items-center justify-center gap-1 text-white/70">
+          <p className="text-xs flex items-center justify-center gap-1 text-[#550000]/70">
             <InstagramIcon size={12} /> @ig
           </p>
         </motion.div>
 
         {/* & */}
         <motion.p
-          className="text-4xl mb-10 text-white/80"
+          className="text-4xl mb-10 text-[#550000]/80"
           variants={zoomIn}
           initial="hidden"
           whileInView="visible"
@@ -119,19 +119,19 @@ const CoupleSection = () => {
         >
           <div className="w-40 h-52 mx-auto rounded-[100px] overflow-hidden shadow-xl border border-white/50 mb-4">
             <img
-              src="/images/groom.jpeg"
+              src="/images/WhatsApp Image 2026-04-16 at 09.46.41.jpeg"
               className="w-full h-full object-cover"
             />
           </div>
 
-          <h3 className="text-2xl mb-2 font-serif">cowo</h3>
+          <h3 className="text-2xl mb-2 font-serif text-[#550000]/80">cowo</h3>
 
-          <p className="text-sm mb-2 text-white/80">
+          <p className="text-sm mb-2 text-[#550000]/80">
             Putra Pertama dari <br />
             Bapak <br />& Ibu
           </p>
 
-          <p className="text-xs flex items-center justify-center gap-1 text-white/70">
+          <p className="text-xs flex items-center justify-center gap-1 text-[#550000]/70">
             <InstagramIcon size={12} /> @ig
           </p>
         </motion.div>

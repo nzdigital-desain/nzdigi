@@ -47,7 +47,7 @@ const GallerySection = () => {
       id="gallery"
       className="py-20 px-6 relative overflow-hidden"
       style={{
-        backgroundImage: "url('/images/gallery-3.jpg')",
+        backgroundImage: "url('/images/gallery-1.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
