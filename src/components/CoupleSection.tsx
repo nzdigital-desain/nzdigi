@@ -30,7 +30,7 @@ const CoupleSection = () => {
       className="min-h-[150vh] py-24 px-6 relative flex items-center justify-center overflow-hidden bg-[url('/images/16-2-scaled-1.jpg')] bg-cover bg-center"
     >
       {/* OVERLAY SAGE TIPIS */}
-      <div className="absolute inset-0 bg-[#7f8f7a]/30" />
+      <div className="absolute inset-0 bg-[#e3999d]/30" />
 
       {/* OVAL HIJAU DALAM */}
       <div className="absolute inset-0 flex items-center justify-center z-0">

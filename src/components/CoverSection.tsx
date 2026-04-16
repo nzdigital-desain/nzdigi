@@ -36,7 +36,7 @@ const CoverSection = ({
         >
           <img
             src="/images/couple-main.jpeg"
-            alt="Icha & Andri"
+            alt="cewe & cowo"
             className="w-full h-full object-cover"
           />
         </motion.div>
@@ -55,7 +55,7 @@ const CoverSection = ({
           animate={{ scale: 1, opacity: 1, y: -100 }}
           transition={{ delay: 0.5 }}
         >
-          Icha & Andri
+          Cewe & Cowo
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}

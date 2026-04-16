@@ -49,7 +49,7 @@ const QuranVerse = () => {
       className="py-20 px-6 relative overflow-hidden bg-[url('/images/ornament-bg.png')] bg-cover bg-center"
     >
       {/* overlay hijau biar mirip desain */}
-      <div className="absolute inset-0 bg-[#7f8f7a]/60" />
+      <div className="absolute inset-0 bg-[#e3999d]/25" />
 
       {/* ornament bawah */}
       <div className="absolute bottom-0 w-full">

@@ -27,14 +27,16 @@ const item = {
 };
 
 const images = [
-  "/images/couple-main.jpeg",
-  "/images/bride.jpeg",
-  "/images/groom.jpeg",
-  "/images/couple-2.jpeg",
-  "/images/story-1.jpeg",
-  "/images/story-3.jpeg",
-  "/images/story-4.jpeg",
-  "/images/story-5.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.45.55.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.45.52.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.45.57.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.46.06.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.54.17.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.46.07.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.54.16.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.54.08.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.46.04.jpeg",
+  "/images/WhatsApp Image 2026-04-16 at 09.45.51.jpeg",
 ];
 
 const GallerySection = () => {

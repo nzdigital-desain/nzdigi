@@ -6,11 +6,11 @@ interface BottomNavProps {
 }
 
 const navItems = [
-  { id: "home", icon: Home, label: "Home" },
-  { id: "couple", icon: Heart, label: "Couple" },
-  { id: "event", icon: Calendar, label: "Event" },
-  { id: "gallery", icon: Image, label: "Gallery" },
-  { id: "wish", icon: MessageCircle, label: "Wish" },
+  { id: "home", icon: Home, label: " " },
+  { id: "couple", icon: Heart, label: " " },
+  { id: "event", icon: Calendar, label: " " },
+  { id: "gallery", icon: Image, label: " " },
+  { id: "wish", icon: MessageCircle, label: " " },
 ];
 
 const BottomNav = ({ activeSection }: BottomNavProps) => {
@@ -23,8 +23,8 @@ const BottomNav = ({ activeSection }: BottomNavProps) => {
     <motion.nav
       className="fixed bottom-0 left-0 right-0 z-40 flex justify-around items-center py-2 px-2 backdrop-blur-md"
       style={{
-        backgroundColor: "rgba(61,74,53,0.85)",
-        borderTop: "1px solid rgba(180,165,130,0.3)",
+        backgroundColor: "rgba(97, 62, 80, 0.85)",
+        borderTop: "1px solid rgb(186, 74, 162)",
       }}
       initial={{ y: 100 }}
       animate={{ y: 0 }}
@@ -38,7 +38,7 @@ const BottomNav = ({ activeSection }: BottomNavProps) => {
             key={item.id}
             onClick={() => scrollTo(item.id)}
             className="flex flex-col items-center gap-0.5 px-2 py-1 transition-colors"
-            style={{ color: isActive ? "#f0ebe0" : "rgba(240,235,224,0.5)" }}
+            style={{ color: isActive ? "#754669" : "rgba(216, 107, 173, 0.5)" }}
           >
             <Icon size={18} />
             <span className="font-body text-[9px]">{item.label}</span>
