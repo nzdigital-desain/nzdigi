@@ -54,7 +54,7 @@ const HeroSection = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/images/WhatsApp Image 2026-04-16 at 09.45.52.jpeg"
+            src="/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.45.52.jpeg"
             alt="Wedding Couple"
             className="w-full h-full object-cover"
           />

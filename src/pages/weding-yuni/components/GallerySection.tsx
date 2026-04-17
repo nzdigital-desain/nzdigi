@@ -27,16 +27,22 @@ const item = {
 };
 
 const images = [
-  "/images/WhatsApp Image 2026-04-16 at 09.45.55.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.45.52.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.45.57.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.46.06.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.54.17.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.46.07.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.54.16.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.54.08.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.46.04.jpeg",
-  "/images/WhatsApp Image 2026-04-16 at 09.45.51.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.45.55.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.45.52.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.45.57.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.46.06.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.54.17.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.46.07.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.54.16.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.54.08.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.46.04.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.45.51.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-17 at 07.19.17 (1).jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-17 at 07.19.17 (2).jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.46.41.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-17 at 07.19.18 (2).jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.46.01.jpeg",
+  "/images/wedingyuni/WhatsApp Image 2026-04-17 at 07.19.17.jpeg",
 ];
 
 const GallerySection = () => {

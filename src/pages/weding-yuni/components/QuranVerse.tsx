@@ -51,16 +51,8 @@ const QuranVerse = () => {
       {/* overlay hijau biar mirip desain */}
       <div className="absolute inset-0 bg-[#e3999d]/25" />
 
-      {/* ornament bawah */}
-      <div className="absolute bottom-0 w-full">
-        <img
-          src="/images/ornament.png"
-          className="w-full object-cover opacity-90"
-        />
-      </div>
-
       <div className="max-w-md mx-auto text-center relative z-10">
-        {/* I | A */}
+        {/* Y | L */}
         <motion.div
           className="flex items-center justify-center gap-6 mb-8"
           variants={zoomIn}
@@ -68,9 +60,9 @@ const QuranVerse = () => {
           whileInView="visible"
           custom={0}
         >
-          <span className="text-5xl text-[#550000] font-serif">I</span>
+          <span className="text-5xl text-[#550000] font-serif">Y</span>
           <div className="w-[1px] h-12 bg-[#550000]/70"></div>
-          <span className="text-5xl text-[#550000] font-serif">A</span>
+          <span className="text-5xl text-[#550000] font-serif">L</span>
         </motion.div>
 
         {/* AYAT */}

@@ -82,20 +82,22 @@ const CoupleSection = () => {
         >
           <div className="w-40 h-52 mx-auto rounded-[100px] overflow-hidden shadow-xl border border-white/50 mb-4">
             <img
-              src="/images/WhatsApp Image 2026-04-16 at 09.46.07.jpeg"
+              src="/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.46.07.jpeg"
               className="w-full h-full object-cover"
             />
           </div>
 
-          <h3 className="text-2xl mb-2 font-serif text-[#550000]">cewe</h3>
+          <h3 className="text-2xl mb-2 font-serif text-[#550000]">
+            Yuni Ramdani
+          </h3>
 
           <p className="text-sm mb-2 text-[#550000]/80">
-            Putri Pertama dari <br />
-            Bapak <br />& Ibu
+            Putri Terakhir dari <br />
+            Bapak Yayan (alm) <br />& Ibu Yayah
           </p>
 
           <p className="text-xs flex items-center justify-center gap-1 text-[#550000]/70">
-            <InstagramIcon size={12} /> @ig
+            <InstagramIcon size={12} /> @Yuniramdani293
           </p>
         </motion.div>
 
@@ -119,20 +121,22 @@ const CoupleSection = () => {
         >
           <div className="w-40 h-52 mx-auto rounded-[100px] overflow-hidden shadow-xl border border-white/50 mb-4">
             <img
-              src="/images/WhatsApp Image 2026-04-16 at 09.46.41.jpeg"
+              src="/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.46.41.jpeg"
               className="w-full h-full object-cover"
             />
           </div>
 
-          <h3 className="text-2xl mb-2 font-serif text-[#550000]/80">cowo</h3>
+          <h3 className="text-2xl mb-2 font-serif text-[#550000]/80">
+            Refi Irwansyah
+          </h3>
 
           <p className="text-sm mb-2 text-[#550000]/80">
             Putra Pertama dari <br />
-            Bapak <br />& Ibu
+            Bapak Sandi (alm) <br />& Ibu Olan
           </p>
 
           <p className="text-xs flex items-center justify-center gap-1 text-[#550000]/70">
-            <InstagramIcon size={12} /> @ig
+            <InstagramIcon size={12} /> @_rfirwnsyh
           </p>
         </motion.div>
       </div>

@@ -41,7 +41,7 @@ const CoverSection = ({
           transition={{ duration: 2.8, type: "spring" }}
         >
           <img
-            src="/images/WhatsApp Image 2026-04-16 at 09.45.52.jpeg"
+            src="/images/wedingyuni/WhatsApp Image 2026-04-16 at 09.45.52.jpeg"
             alt="cewe & cowo"
             className="w-full h-full object-cover"
           />
@@ -61,7 +61,7 @@ const CoverSection = ({
           animate={{ scale: 1, opacity: 1, y: -95 }}
           transition={{ duration: 3.8, type: "spring" }}
         >
-          Cewe & Cowo
+          Yuni & Refi
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}
