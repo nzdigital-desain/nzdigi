@@ -10,7 +10,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           {/* Halaman Undangan Yuni */}
-          <Route path="/wedingyunidanlevi" element={<WedingYuni />} />
+          <Route path="/wedingyunidanrefi" element={<WedingYuni />} />
 
           {/* Halaman Template Sunda */}
           <Route path="/sunda" element={<SundaPage />} />

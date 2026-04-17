@@ -133,7 +133,7 @@ const QuranVerse = () => {
 
         {/* BUTTON */}
         <motion.a
-          href="https://www.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Yuni+%26+....&dates=20260622T030000Z%2F20260622T150000Z"
+          href="https://www.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Yuni+%26+Refi&dates=20260622T030000Z%2F20260622T150000Z"
           target="_blank"
           className="inline-block bg-[#FFC4C4] text-[#6E1A37] px-6 py-3 rounded-full text-sm shadow-md"
           variants={zoomIn}
