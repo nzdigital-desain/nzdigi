@@ -5,6 +5,7 @@ import { Toaster } from "@/pages/weding-yuni/components/ui/toaster";
 import { TooltipProvider } from "@/pages/weding-yuni/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import KirimUndangan from "@/pages/weding-yuni/components/KirimUndangan.tsx";
 
 const queryClient = new QueryClient();
 

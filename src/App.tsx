@@ -3,6 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import WedingYuni from "@/pages/weding-yuni/pages/Index";
 import SundaPage from "@/pages/template/pages/Index";
 import LandingPage from "@/LandingPage";
+import KirimUndangan from "@/pages/weding-yuni/components/KirimUndangan.tsx";
 const App = () => {
   return (
     <HelmetProvider>
@@ -11,6 +12,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           {/* Halaman Undangan Yuni */}
           <Route path="/wedingyunidanrefi" element={<WedingYuni />} />
+          <Route path="/kirim-undangan" element={<KirimUndangan />} />
 
           {/* Halaman Template Sunda */}
           <Route path="/sunda" element={<SundaPage />} />
