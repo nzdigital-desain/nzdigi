@@ -62,7 +62,7 @@ const QuranVerse = () => {
         >
           <span className="text-5xl text-[#550000] font-serif">Y</span>
           <div className="w-[1px] h-12 bg-[#550000]/70"></div>
-          <span className="text-5xl text-[#550000] font-serif">L</span>
+          <span className="text-5xl text-[#550000] font-serif">R</span>
         </motion.div>
 
         {/* AYAT */}
