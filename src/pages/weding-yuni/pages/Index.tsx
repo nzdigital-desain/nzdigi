@@ -73,7 +73,6 @@ const Index = () => {
           content="https://nzdigi.vercel.app/images/WhatsApp%20Image%202026-04-16%20at%2009.45.52.jpeg"
         />
       </Helmet>
-
       <div className="relative w-full overflow-x-hidden">
         {/* COVER SECTION */}
         <AnimatePresence>
