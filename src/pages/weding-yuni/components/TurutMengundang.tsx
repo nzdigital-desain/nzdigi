@@ -79,7 +79,7 @@ const TurutMengundang = () => {
           custom={0.4}
           viewport={{ once: true }}
         >
-          cewe & cowo
+          Yuni & Refi
         </motion.h2>
       </div>
     </section>

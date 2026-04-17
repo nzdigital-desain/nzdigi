@@ -91,17 +91,21 @@ const WeddingGiftSection = () => {
           </h3>
 
           <p className="text-sm leading-relaxed mb-4 text-[#021A54]">
-            catin 088xxxxxxx
+            Yuni Ramdani 0857-9499-8719
             <br />
-            Kp. .............,
+            Kp. Pasir Awi RT 11/03 Desa Palasari Girang,
             <br />
-            .............,
+            Kecamatan Kalapanunggal,
             <br />
-            .................
+            Kabupaten Sukabumi
           </p>
 
           <button
-            onClick={() => copyText(".....................")}
+            onClick={() =>
+              copyText(
+                "Yuni Ramdani 0857-9499-8719 Kp. Pasir Awi RT 11/03 Desa Palasari Girang, Kecamatan Kalapanunggal, Kabupaten Sukabumi",
+              )
+            }
             className="px-5 py-2 rounded-full bg-[#021A54] text-white text-sm"
           >
             Salin Alamat

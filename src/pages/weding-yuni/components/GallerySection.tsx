@@ -1,26 +1,48 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// 🔥 container: ngatur urutan muncul
+/* ANIMASI MASUK SAAT SCROLL */
 const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.18, // ⬅️ lebih gede biar keliatan satu-satu
-      delayChildren: 0.2, // ⬅️ nunggu dikit sebelum mulai
+      staggerChildren: 0.14,
+      delayChildren: 0.12,
     },
   },
 };
 
-// 🔥 item: animasi tiap gambar
 const item = {
-  hidden: { opacity: 0, y: 50, scale: 0.9 },
+  hidden: {
+    opacity: 0,
+    y: 45,
+    scale: 0.92,
+    rotate: 1.5,
+  },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
+    rotate: 0,
     transition: {
-      duration: 0.7,
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
+const titleAnim = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    letterSpacing: "0.4em",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    letterSpacing: "0.25em",
+    transition: {
+      duration: 1,
       ease: [0.22, 1, 0.36, 1] as const,
     },
   },
@@ -58,40 +80,57 @@ const GallerySection = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black/30" />
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/35 backdrop-blur-[2px]" />
 
+      {/* CONTENT */}
       <motion.div
         className="relative z-10 max-w-md mx-auto"
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{
+          once: true,
+          amount: 0.15,
+        }}
       >
         {/* TITLE */}
         <motion.h3
-          variants={item}
-          className="text-white text-xl text-center mb-8"
+          variants={titleAnim}
+          className="text-white text-2xl text-center mb-10 font-light tracking-[0.25em]"
         >
-          Gallery
+          GALLERY
         </motion.h3>
 
         {/* GRID */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-4">
           {images.map((src, index) => (
-            <motion.div
+            <motion.button
               key={src}
               variants={item}
-              className="rounded-2xl overflow-hidden cursor-pointer shadow-lg overflow-hidden cursor-pointer shadow-lg flex items-center justify-center bg-black/10"
-              whileHover={{ scale: 2.06 }}
-              whileTap={{ scale: 100 }}
               onClick={() => setSelectedImage(src)}
+              className="group relative rounded-2xl overflow-hidden shadow-xl bg-white/10"
+              whileHover={{
+                y: -6,
+                scale: 1.03,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 18,
+              }}
             >
               <img
                 src={src}
                 alt={`Gallery ${index + 1}`}
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
               />
-            </motion.div>
+
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-500" />
+            </motion.button>
           ))}
         </div>
       </motion.div>
@@ -101,7 +140,7 @@ const GallerySection = () => {
         {selectedImage && (
           <motion.div
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            style={{ backgroundColor: "rgba(0,0,0,0.85)" }}
+            style={{ backgroundColor: "rgba(0,0,0,0.88)" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -110,18 +149,27 @@ const GallerySection = () => {
             <motion.img
               src={selectedImage}
               alt="preview"
-              className="max-w-full max-h-[90vh] object-contain rounded-xl"
-              initial={{ opacity: 0, scale: 0.85, y: 40 }}
+              className="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl"
+              initial={{
+                opacity: 0,
+                scale: 0.92,
+                y: 25,
+              }}
               animate={{
                 opacity: 1,
                 scale: 1,
                 y: 0,
                 transition: {
-                  duration: 0.4,
-                  ease: [0.22, 1, 0.36, 1] as const,
+                  duration: 0.45,
+                  ease: [0.22, 1, 0.36, 1],
                 },
               }}
-              exit={{ opacity: 0, scale: 0.9 }}
+              exit={{
+                opacity: 0,
+                scale: 0.96,
+                y: 15,
+              }}
+              onClick={(e) => e.stopPropagation()}
             />
           </motion.div>
         )}
