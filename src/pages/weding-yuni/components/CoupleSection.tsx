@@ -86,7 +86,7 @@ const CoupleSection = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          //nama mempelai//
+
           <h3 className="text-2xl mb-2 font-serif text-[#550000]">
             Yuni Ramdani
           </h3>
