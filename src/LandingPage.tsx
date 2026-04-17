@@ -10,7 +10,7 @@ const LandingPage = () => {
         <div className="flex items-center gap-3">
           {/* LOGO */}
           <img
-            src="public\images\nz logo.png"
+            src="/images/nz logo.png"
             alt="NZDIGI Logo"
             className="h-10 w-auto object-contain"
           />
