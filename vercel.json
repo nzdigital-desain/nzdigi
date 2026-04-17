@@ -2,10 +2,6 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/wedingyuni",
-      "destination": "/wedingyuni/index.html"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
