@@ -15,7 +15,10 @@
     <meta property="og:type" content="website" />
 
     <script>
-      window.location.href = "/wedingyuni";
+      // Hanya pindah jika alamatnya bukan rute asli React
+      if (window.location.pathname === "/wedingyuni/") {
+        window.location.href = "/wedingyuni";
+      }
     </script>
   </head>
   <body>
