@@ -1,6 +1,6 @@
 import { motion, Variants } from "framer-motion";
 
-// 1. Definisi Variasi Animasi dengan Type Safety
+// ANIMASI
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (delay: number) => ({
@@ -9,7 +9,7 @@ const fadeInUp: Variants = {
     transition: {
       duration: 2.8,
       delay,
-      ease: [0.215, 0.61, 0.355, 1] as const, // Fix TS Error: as const
+      ease: [0.215, 0.61, 0.355, 1] as const,
     },
   }),
 };
@@ -21,7 +21,7 @@ const zoomInScale: Variants = {
     scale: 1,
     transition: {
       duration: 1,
-      ease: "easeOut" as const, // Fix TS Error: as const
+      ease: "easeOut" as const,
     },
   },
 };
@@ -32,7 +32,7 @@ const HeroSection = () => {
       id="home"
       className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden bg-cover bg-center"
     >
-      {/* BACKGROUND IMAGE DENGAN ANIMASI ZOOM */}
+      {/* BACKGROUND */}
       <motion.div
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -40,12 +40,12 @@ const HeroSection = () => {
         className="absolute inset-0 z-0 bg-[url('/images/gallery-3.jpg')] bg-cover bg-center"
       />
 
-      {/* OVERLAY BIAR TEKS TERBACA */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-[1]" />
 
-      {/* CONTENT WRAPPER */}
+      {/* CONTENT */}
       <div className="relative z-10 flex flex-col items-center px-6">
-        {/* FOTO OVAL */}
+        {/* FOTO */}
         <motion.div
           className="w-44 h-56 rounded-[50%] overflow-hidden shadow-2xl mb-8 -mt-14 border-4 border-white/50"
           variants={zoomInScale}
@@ -60,33 +60,35 @@ const HeroSection = () => {
           />
         </motion.div>
 
-        {/* TEKS "THE WEDDING OF" */}
+        {/* TITLE */}
         <motion.p
           className="text-xs tracking-[0.4em] uppercase mb-3 text-[#550000] font-medium"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          custom={0.5} // Delay manual lewat custom prop
+          custom={0.5}
           viewport={{ once: true }}
         >
           The Wedding Of
         </motion.p>
 
-        {/* NAMA MEMPELAI */}
+        {/* NAMA MEMPELAI - DIKECILKAN */}
         <motion.h2
-          className="font-script text-6xl md:text-7xl mb-4 text-[#550000] drop-shadow-sm"
+          className="font-script text-4xl md:text-5xl mb-4 text-[#550000] drop-shadow-sm text-center leading-tight"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           custom={0.8}
           viewport={{ once: true }}
         >
-          cewe & cowo
+          <span className="block">Yuni Ramdani</span>
+          <span className="block text-3xl md:text-4xl my-1">&</span>
+          <span className="block">Refi Irwansyah</span>
         </motion.h2>
 
         {/* TANGGAL */}
         <motion.p
-          className="text-base tracking-[0.25em] text-[#550000]/80 font-light"
+          className="text-sm tracking-[0.25em] text-[#550000]/80 font-light"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -97,7 +99,7 @@ const HeroSection = () => {
         </motion.p>
       </div>
 
-      {/* ORNAMEN BAWAH (FLOATING ANIMATION) */}
+      {/* ORNAMEN */}
       <motion.div
         className="absolute bottom-16 w-full flex justify-center z-[2]"
         animate={{ y: [0, -15, 0] }}
@@ -110,7 +112,7 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* SCROLL INDICATOR */}
+      {/* SCROLL */}
       <motion.div
         className="absolute bottom-8 z-20 cursor-pointer"
         animate={{ y: [0, 8, 0] }}

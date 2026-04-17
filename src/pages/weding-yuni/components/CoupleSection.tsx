@@ -86,16 +86,14 @@ const CoupleSection = () => {
               className="w-full h-full object-cover"
             />
           </div>
-
+          //nama mempelai//
           <h3 className="text-2xl mb-2 font-serif text-[#550000]">
             Yuni Ramdani
           </h3>
-
           <p className="text-sm mb-2 text-[#550000]/80">
             Putri Terakhir dari <br />
             Bapak Yayan (alm) <br />& Ibu Yayah
           </p>
-
           <p className="text-xs flex items-center justify-center gap-1 text-[#550000]/70">
             <InstagramIcon size={12} /> @Yuniramdani293
           </p>
