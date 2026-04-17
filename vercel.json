@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/wedingyuni",
-      "destination": "/index.html"
+      "destination": "/wedingyuni.html"
     },
     {
       "source": "/(.*)",
