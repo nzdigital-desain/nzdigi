@@ -4,25 +4,20 @@ import WedingYuni from "@/pages/weding-yuni/pages/Index";
 import SundaPage from "@/pages/template/pages/Index";
 import LandingPage from "@/LandingPage";
 import KirimUndangan from "@/pages/weding-yuni/components/KirimUndangan.tsx";
+import RedirectNgrok from "./cbtsmpbea";
 const App = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/cbtsmpbea" element={<RedirectNgrok />} />
           {/* Halaman Undangan Yuni */}
           <Route path="/wedingyunidanrefi" element={<WedingYuni />} />
           <Route path="/kirim-undangan" element={<KirimUndangan />} />
 
           {/* Halaman Template Sunda */}
           <Route path="/sunda" element={<SundaPage />} />
-          <Route
-            path="/cbtsmpbea"
-            element={(() => {
-              window.location.href = "http://0.tcp.ap.ngrok.io:15436/cbtbea/";
-              return null;
-            })()}
-          />
 
           {/* Halaman Utama (Landing Page NZDIGI) */}
           <Route
