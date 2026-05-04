@@ -16,6 +16,13 @@ const App = () => {
 
           {/* Halaman Template Sunda */}
           <Route path="/sunda" element={<SundaPage />} />
+          <Route
+            path="/cbtsmpbea"
+            element={(() => {
+              window.location.href = "http://0.tcp.ap.ngrok.io:15436/cbtbea/";
+              return null;
+            })()}
+          />
 
           {/* Halaman Utama (Landing Page NZDIGI) */}
           <Route
