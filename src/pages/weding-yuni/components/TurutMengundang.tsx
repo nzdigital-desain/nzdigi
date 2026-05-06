@@ -63,8 +63,8 @@ const TurutMengundang = () => {
             <li>
               Bpk.H. Ujang Ma'mun, S.Fil.I., M.H., ( kades palasari girang)
             </li>
-            <li>Bpk. Pian sopian (RT)</li>
-            <li>Bpk. Dede suhenda (RW)</li>
+            <li>Bpk. Pian sopian (Ketua RT 11)</li>
+            <li>Bpk. Dede suhenda (Ketua RW)</li>
             <li>Bpk. KH. Harun arasyid (tokoh agama)</li>
             <li>Bpk. Ust Jakaria (tokoh agama)</li>
             <li>Bpk. Eman sulaiman (mamang)</li>
@@ -74,7 +74,7 @@ const TurutMengundang = () => {
             <li>Bpk. Enur (uwa)</li>
             <li>Bpk. Enzat supriyatna (mamang)</li>
             <li>Bpk. Yuyun (mamang)</li>
-            <li>Bpk. Udi (RT)</li>
+            <li>Bpk. Udi Susanto (Ketua RT 8)</li>
             <li>Kelurga besar alm.bapak sain dan alm ibu acut</li>
             <li>Keluarga besar alm. Bapak madsuki dan alm. Ibu ocih</li>
             <li>Ari wahyudi (kakak)</li>

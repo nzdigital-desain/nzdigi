@@ -15,6 +15,39 @@ const WeddingGiftSection = () => {
     alert("Disalin!");
   };
 
+  const giftData = [
+    {
+      bank: "BNI",
+      logo: "/images/Bank_Negara_Indonesia_logo_(2004).png",
+      rekening: "2013172052",
+      atasNama: "yuni ramdani",
+    },
+    {
+      bank: "BCA",
+      logo: "/images/BCA-1-1.png",
+      rekening: "8415932053",
+      atasNama: "yuni ramdani",
+    },
+    {
+      bank: "DANA",
+      logo: "/images/Dana_logo.png",
+      rekening: "085794998719",
+      atasNama: "yuni ramdani",
+    },
+    {
+      bank: "Seabank",
+      logo: "/images/SeaBank.svg",
+      rekening: "901421772029",
+      atasNama: "REFI IRWANSYAH",
+    },
+    {
+      bank: "DANA",
+      logo: "/images/Dana_logo.png",
+      rekening: "083819605963",
+      atasNama: "REFI IRWANSYAH",
+    },
+  ];
+
   return (
     <section
       id="gift"
@@ -46,58 +79,55 @@ const WeddingGiftSection = () => {
           secara cashless
         </p>
 
-        {/* === BRI === */}
-        <div className="mb-10">
-          <img src="/images/BANK.png" alt="BRI" className="w-24 mx-auto mb-4" />
+        {/* LIST REKENING */}
+        <div className="space-y-4 mb-12">
+          {giftData.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/40 backdrop-blur-sm p-4 rounded-2xl border border-white/60 flex items-center justify-between gap-3 shadow-sm"
+            >
+              {/* Logo Bank */}
+              <div className="w-16 flex-shrink-0">
+                <img
+                  src={item.logo}
+                  alt={item.bank}
+                  className="w-full h-8 object-contain"
+                />
+              </div>
 
-          <p className="text-sm text-[#021A54]">
-            No. Rekening : 1111111111111111
-          </p>
-          <p className="text-sm mb-4 text-[#021A54]">An. catin</p>
+              {/* Info Rekening */}
+              <div className="flex-1 text-left">
+                <p className="text-xs font-bold text-[#021A54] leading-none mb-1">
+                  {item.rekening}
+                </p>
+                <p className="text-[10px] uppercase tracking-wider text-[#021A54] opacity-80">
+                  An. {item.atasNama}
+                </p>
+              </div>
 
-          <button
-            onClick={() => copyText("1111111111111111")}
-            className="px-5 py-2 rounded-full bg-[#021A54] text-white text-sm"
-          >
-            Salin No. Rekening
-          </button>
-        </div>
-
-        {/* === BCA === */}
-        <div className="mb-10">
-          <img
-            src="/images/BCA-1-1.png"
-            alt="BCA"
-            className="w-24 mx-auto mb-4"
-          />
-
-          <p className="text-sm text-[#021A54]">
-            No. Rekening : 00000000000000001
-          </p>
-          <p className="text-sm mb-4 text-[#021A54]">An. catin</p>
-
-          <button
-            onClick={() => copyText("00000000001")}
-            className="px-5 py-2 rounded-full bg-[#021A54] text-white text-sm"
-          >
-            Salin No. Rekening
-          </button>
+              {/* Tombol Salin */}
+              <button
+                onClick={() => copyText(item.rekening)}
+                className="px-3 py-2 rounded-xl bg-[#021A54] text-white text-[10px] font-medium active:scale-95 transition-transform"
+              >
+                Salin
+              </button>
+            </div>
+          ))}
         </div>
 
         {/* === ALAMAT === */}
-        <div>
+        <div className="bg-white/20 p-6 rounded-3xl border border-white/40">
           <h3 className="text-sm font-semibold mb-4 tracking-wide text-[#021A54]">
             ALAMAT PENGIRIMAN HADIAH
           </h3>
 
-          <p className="text-sm leading-relaxed mb-4 text-[#021A54]">
-            Yuni Ramdani 0857-9499-8719
+          <p className="text-xs leading-relaxed mb-6 text-[#021A54]">
+            <span className="font-bold">Yuni Ramdani (0857-9499-8719)</span>
             <br />
             Kp. Pasir Awi RT 11/03 Desa Palasari Girang,
             <br />
-            Kecamatan Kalapanunggal,
-            <br />
-            Kabupaten Sukabumi
+            Kecamatan Kalapanunggal, Kabupaten Sukabumi
           </p>
 
           <button
@@ -106,7 +136,7 @@ const WeddingGiftSection = () => {
                 "Yuni Ramdani 0857-9499-8719 Kp. Pasir Awi RT 11/03 Desa Palasari Girang, Kecamatan Kalapanunggal, Kabupaten Sukabumi",
               )
             }
-            className="px-5 py-2 rounded-full bg-[#021A54] text-white text-sm"
+            className="px-5 py-2 rounded-full bg-[#021A54] text-white text-sm shadow-md"
           >
             Salin Alamat
           </button>
