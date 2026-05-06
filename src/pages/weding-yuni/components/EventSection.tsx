@@ -14,7 +14,7 @@ const EventSection = () => {
     {
       title: "Akad Nikah",
       date: "Senin, 22 Juni 2026",
-      time: "Pukul 10.00 WIB - Selesai",
+      time: "Pukul 09.00 WIB - Selesai",
       location:
         "Rumah Mempelai Wanita\nKp. Pasir Awi RT 11/03, Desa Palasari Girang Kec. Kalapanunggal, Kab. Sukabumi",
       mapUrl: "https://maps.app.goo.gl/QBiD9bCAMoWksqD5A",
