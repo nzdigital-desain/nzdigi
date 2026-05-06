@@ -60,14 +60,45 @@ const TurutMengundang = () => {
             Turut mengundang pihak perempuan:
           </p>
           <ol className="list-decimal list-inside space-y-0.5 mb-4">
-            <li>1</li>
-            <li>2</li>
+            <li>
+              Bpk.H. Ujang Ma'mun, S.Fil.I., M.H., ( kades palasari girang)
+            </li>
+            <li>Bpk. Pian sopian (RT)</li>
+            <li>Bpk. Dede suhenda (RW)</li>
+            <li>Bpk. KH. Harun arasyid (tokoh agama)</li>
+            <li>Bpk. Ust Jakaria (tokoh agama)</li>
+            <li>Bpk. Eman sulaiman (mamang)</li>
+            <li>Bpk. Epen supendi (uwa)</li>
+            <li>Bpk. Udin samsudin (uwa)</li>
+            <li>Alm Ibu. Juhairoh (uwa)</li>
+            <li>Bpk. Enur (uwa)</li>
+            <li>Bpk. Enzat supriyatna (mamang)</li>
+            <li>Bpk. Yuyun (mamang)</li>
+            <li>Bpk. Udi (RT)</li>
+            <li>Kelurga besar alm.bapak sain dan alm ibu acut</li>
+            <li>Keluarga besar alm. Bapak madsuki dan alm. Ibu ocih</li>
+            <li>Ari wahyudi (kakak)</li>
+            <li>Sri rahma wulan (kakak)</li>
+            <li>Yani karyani (kakak)</li>
+            <li>Endi mulyadi (kakak)</li>
+            <li>Yanti oktapia (kakak)</li>
+            <li>Yana mulyana (kakak)</li>
           </ol>
 
           <p className="mb-3 font-semibold">Turut mengundang pihak pria:</p>
           <ol className="list-decimal list-inside space-y-0.5">
-            <li>1</li>
-            <li>2</li>
+            <li>Bu hj.nasih (kades mekarsari)</li>
+            <li>Bapak RT Ma'mun</li>
+            <li>Bapak RW Wardi</li>
+            <li>Keluarga besar bapak Acang</li>
+            <li>Kelurga besar bpk H.said</li>
+            <li>Keluarga besar alm BPK oding</li>
+            <li>Komunitas Fotograpy Jonggol (KFJ)</li>
+            <li>Musketer's</li>
+            <li>Pemuda kp.cipicung 14/06</li>
+            <li>Boys garden</li>
+            <li>Alumni SMK pijar alam 2 tahun 2016-2017</li>
+            <li>Alumni SMP PGRI gandoang 01 tahun 2013/2014</li>
           </ol>
         </motion.div>
 
