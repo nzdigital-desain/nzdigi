@@ -63,26 +63,26 @@ const TurutMengundang = () => {
             <li>
               Bpk.H. Ujang Ma'mun, S.Fil.I., M.H., ( kades palasari girang)
             </li>
-            <li>Bpk. Pian sopian (Ketua RT 11)</li>
-            <li>Bpk. Dede suhenda (Ketua RW)</li>
-            <li>Bpk. KH. Harun arasyid (tokoh agama)</li>
+            <li>Bpk. Pian Supriani (Ketua RT 11)</li>
+            <li>Bpk. D Suhenda (Ketua RW)</li>
+            <li>Bpk. KH. Harun Arasyid (tokoh agama)</li>
             <li>Bpk. Ust Jakaria (tokoh agama)</li>
-            <li>Bpk. Eman sulaiman (mamang)</li>
-            <li>Bpk. Epen supendi (uwa)</li>
-            <li>Bpk. Udin samsudin (uwa)</li>
+            <li>Bpk. Eman Sulaiman (mamang)</li>
+            <li>Bpk. Epen Supendi (uwa)</li>
+            <li>Bpk. Udin Samsudin (uwa)</li>
             <li>Alm Ibu. Juhairoh (uwa)</li>
             <li>Bpk. Enur (uwa)</li>
-            <li>Bpk. Enzat supriyatna (mamang)</li>
+            <li>Bpk. Enzat Supriyatna (mamang)</li>
             <li>Bpk. Yuyun (mamang)</li>
             <li>Bpk. Udi Susanto (Ketua RT 8)</li>
             <li>Kelurga besar alm.bapak sain dan alm ibu acut</li>
             <li>Keluarga besar alm. Bapak madsuki dan alm. Ibu ocih</li>
-            <li>Ari wahyudi (kakak)</li>
-            <li>Sri rahma wulan (kakak)</li>
-            <li>Yani karyani (kakak)</li>
-            <li>Endi mulyadi (kakak)</li>
-            <li>Yanti oktapia (kakak)</li>
-            <li>Yana mulyana (kakak)</li>
+            <li>Ari Wahyudi (kakak Sepupu)</li>
+            <li>Sri Rahma Wulan (kakak)</li>
+            <li>Yani Karyani (kakak)</li>
+            <li>Endi Mulyadi (kakak)</li>
+            <li>Yanti Oktapia (kakak)</li>
+            <li>Yana Mulyana (kakak)</li>
           </ol>
 
           <p className="mb-3 font-semibold">Turut mengundang pihak pria:</p>
