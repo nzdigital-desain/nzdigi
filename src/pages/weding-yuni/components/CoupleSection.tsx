@@ -36,14 +36,6 @@ const CoupleSection = () => {
       <div className="absolute inset-0 flex items-center justify-center z-0">
         <div className="w-[90%] max-w-md h-[85%] bg-[#FFC4C4]/80 backdrop-blur-sm border border-white/20 shadow-2xl rounded-[999px/400px]" />
       </div>
-      {/* ORNAMENT BAWAH */}
-      <div className="absolute bottom-0 w-full z-0">
-        <img
-          src="/images/ornament-bottom.png"
-          className="w-full object-cover"
-        />
-      </div>
-
       {/* CONTENT */}
       <div className="relative z-10 max-w-md mx-auto text-center px-8 py-16 text-[#550000]">
         {/* BISMILLAH */}
