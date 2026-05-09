@@ -130,7 +130,7 @@ const CoupleSection = () => {
 
           <p className="text-sm mb-2 text-[#550000]/80">
             Putra Pertama dari <br />
-            Bapak Sandi alm. <br />& Ibu Olan
+            Bapak Sandi (Alm.) <br />& Ibu Olan
           </p>
 
           <p className="text-xs flex items-center justify-center gap-1 text-[#550000]/70">
