@@ -84,7 +84,7 @@ const CoupleSection = () => {
           </h3>
           <p className="text-sm mb-2 text-[#550000]/80">
             Putri Terakhir dari <br />
-            Bapak Yayan alm. <br />& Ibu Yayah
+            Bapak Yayan (Alm.) <br />& Ibu Yayah
           </p>
           <p className="text-xs flex items-center justify-center gap-1 text-[#550000]/70">
             <InstagramIcon size={12} /> @Yuniramdani293
