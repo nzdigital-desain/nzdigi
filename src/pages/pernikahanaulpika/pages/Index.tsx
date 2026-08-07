@@ -70,8 +70,8 @@ const Index = () => {
 
           <Gallery />
           <Rsvp />
-          <Gift />
           <TurutMengundang />
+          <Gift />
           <Closing />
         </main>
         <Footer />

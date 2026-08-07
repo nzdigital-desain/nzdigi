@@ -137,5 +137,6 @@ export const turutMengundang = {
     "10. Bpk. Dedi Hidayatullah ( Paman )",
     "11. Bpk. Agus Sambas ( Tokoh Masyarakat )",
     "12. Ustad Asep ( Tokoh Agama )",
+    "13. Bpk. Iwan Suryana ( Paman )",
   ],
 };

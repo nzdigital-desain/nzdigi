@@ -369,6 +369,19 @@ export function LoveStory() {
   );
 }
 
+export function TurutMengundang() {
+  return (
+    <section className="bg-blush px-5 py-14 text-center sm:px-6 sm:py-16">
+      <Reveal>
+        <ScriptTitle text="Turut Mengundang" className="text-3xl sm:text-4xl text-cream" />
+      </Reveal>
+      <div className="mt-9 space-y-5">
+        <GuestList title="" list={turutMengundang.wanita} />
+      </div>
+    </section>
+  );
+}
+
 export function Gallery() {
   return (
     <section id="gallery" className="bg-blush px-5 py-14 text-center sm:px-6 sm:py-16">
@@ -461,19 +474,6 @@ function GuestList({ title, list }: { title: string; list: string[] }) {
         ))}
       </ul>
     </Reveal>
-  );
-}
-
-export function TurutMengundang() {
-  return (
-    <section className="bg-blush px-5 py-14 text-center sm:px-6 sm:py-16">
-      <Reveal>
-        <ScriptTitle text="Turut Mengundang" className="text-3xl sm:text-4xl text-cream" />
-      </Reveal>
-      <div className="mt-9 space-y-5">
-        <GuestList title="" list={turutMengundang.wanita} />
-      </div>
-    </section>
   );
 }
 

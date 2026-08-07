@@ -77,6 +77,8 @@ export function FloatingControls() {
 export function MusicToggle({ start }: { start: boolean }) {
   const ref = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
+  // Track apakah musik sedang diputar sebelum tab disembunyikan
+  const wasPlayingRef = useRef(false);
 
   useEffect(() => {
     if (!start || !ref.current) return;
@@ -86,6 +88,37 @@ export function MusicToggle({ start }: { start: boolean }) {
       .then(() => setPlaying(true))
       .catch(() => setPlaying(false));
   }, [start]);
+
+  // Pause musik saat tab tidak aktif / browser diminimize, resume saat aktif kembali
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const el = ref.current;
+      if (!el) return;
+      if (document.hidden) {
+        wasPlayingRef.current = !el.paused;
+        if (!el.paused) {
+          el.pause();
+          setPlaying(false);
+        }
+      } else {
+        if (wasPlayingRef.current) {
+          el.play().then(() => setPlaying(true)).catch(() => undefined);
+        }
+      }
+    };
+
+    // Hentikan musik saat halaman di-unload (tutup tab/browser)
+    const handlePageHide = () => {
+      ref.current?.pause();
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", handlePageHide);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", handlePageHide);
+    };
+  }, []);
 
   const toggle = () => {
     const el = ref.current;
