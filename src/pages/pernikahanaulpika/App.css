@@ -1,0 +1,84 @@
+/* Design system for nzdigi-main (Blush Pink Theme) */
+:root {
+  --blush: oklch(0.79 0.072 20.5);
+  --blush-soft: oklch(0.88 0.045 20.5);
+  --blush-deep: oklch(0.72 0.09 20.5);
+  --ink: oklch(0.42 0.012 20);
+  --cream: oklch(0.985 0.003 60);
+  --gradient-blush: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--blush) 0%, transparent),
+    var(--blush) 78%
+  );
+  --gradient-ring: linear-gradient(
+    160deg,
+    var(--blush-deep),
+    color-mix(in oklab, var(--blush-soft) 55%, white)
+  );
+  --shadow-soft: 0 10px 30px -12px oklch(0.5 0.06 20 / 0.35);
+}
+
+.bg-blush { background-color: var(--blush); }
+.bg-blush-soft { background-color: var(--blush-soft); }
+.bg-blush-deep { background-color: var(--blush-deep); }
+.bg-cream { background-color: var(--cream); }
+
+.text-blush { color: var(--blush); }
+.text-blush-soft { color: var(--blush-soft); }
+.text-blush-deep { color: var(--blush-deep); }
+.text-cream { color: var(--cream); }
+.text-ink { color: var(--ink); }
+
+.border-blush-soft { border-color: var(--blush-soft); }
+
+.script-title {
+  position: relative;
+  font-family: var(--font-script, "Sacramento", cursive);
+  line-height: 1;
+  display: inline-block;
+}
+
+.script-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0.12em;
+  top: 0.16em;
+  opacity: 0.22;
+  color: inherit;
+  filter: blur(0.3px);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.ghost-caps {
+  position: relative;
+  display: inline-block;
+}
+
+.ghost-caps::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0.05em;
+  top: 0.16em;
+  opacity: 0.22;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.arch-top {
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+}
+
+.arch-bottom {
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

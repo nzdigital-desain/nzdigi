@@ -14,12 +14,19 @@ export default {
     },
     extend: {
       fontFamily: {
-        script: ['"Great Vibes"', 'cursive'],
-        display: ['"Playfair Display"', 'serif'],
-        body: ['"Cormorant Garamond"', 'serif'],
-        serif: ['"Lora"', 'serif'],
+        script: ['"Sacramento"', '"Great Vibes"', 'cursive'],
+        display: ['"Cinzel"', '"Playfair Display"', 'serif'],
+        body: ['"Poppins"', '"Cormorant Garamond"', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', '"Lora"', 'serif'],
       },
       colors: {
+        blush: {
+          DEFAULT: "var(--blush, oklch(0.79 0.072 20.5))",
+          soft: "var(--blush-soft, oklch(0.88 0.045 20.5))",
+          deep: "var(--blush-deep, oklch(0.72 0.09 20.5))",
+        },
+        cream: "var(--cream, oklch(0.985 0.003 60))",
+        ink: "var(--ink, oklch(0.42 0.012 20))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
