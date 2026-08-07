@@ -28,6 +28,8 @@ const App = () => {
             {/* Halaman Undangan Aul & Pika */}
             <Route path="/pernikahanaulpika" element={<PernikahanAulPikaPage />} />
             <Route path="/pernikahanaulpikadan" element={<PernikahanAulPikaPage />} />
+            <Route path="/undanganpika" element={<PernikahanAulPikaPage />} />
+            <Route path="/pernikahan-pika-aul" element={<PernikahanAulPikaPage />} />
             <Route path="/nzdigi" element={<PernikahanAulPikaPage />} />
             <Route path="/nzdigi-main" element={<PernikahanAulPikaPage />} />
 
