@@ -10,30 +10,27 @@ const KirimUndangan = () => {
     }
 
     const link =
-      "https://nzdigi.vercel.app/pernikahan-pika-aul?to=" +
+      "https://nzdigi.vercel.app/pernikahanaulpikadan" +
       encodeURIComponent(guestName);
 
     const message = `Kepada Yth.
 Bapak/Ibu/Saudara/i
-${guestName}
+*${guestName}*
 
-Assalamualaikum Warahmatullahi Wabarakaatuh
-
+_Assalamualaikum Warahmatullahi Wabarakaatuh_
 Dengan memohon rahmat dan ridho Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami :
 
-🧕🏻 Pika Rismaya
+🧕🏻 *Pika Rismaya*
 
 dengan
 
-🤵🏻 Aulia Rahman Suganda
+🤵🏻 *Aulia Rahman Suganda*
 
 Untuk informasi detail mengenai acara, silahkan kunjungi link dibawah ini :
-${link}
+*${link}*
 
 Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
-
 Atas kehadiran dan doa restunya kami ucapkan terima kasih.
-
 Wassalamualaikum Warahmatullahi Wabarakaatuh
 
 Hormat kami,
