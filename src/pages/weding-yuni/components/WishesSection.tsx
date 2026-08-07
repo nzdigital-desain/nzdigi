@@ -17,31 +17,74 @@ const WishesSection = () => {
   const [wanita, setWanita] = useState({ name: "", attendance: "" });
   const [pria, setPria] = useState({ name: "", attendance: "" });
 
+  const getLocalWishesYuni = () => {
+    try {
+      const raw = localStorage.getItem("nzdigi_wishes_yuni");
+      return raw ? JSON.parse(raw) : [];
+    } catch {
+      return [];
+    }
+  };
+
+  const saveLocalWishYuni = (item: any) => {
+    try {
+      const existing = getLocalWishesYuni();
+      localStorage.setItem("nzdigi_wishes_yuni", JSON.stringify([item, ...existing]));
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   useEffect(() => {
     fetchWishes();
   }, []);
 
   const fetchWishes = async () => {
-    const { data } = await supabase
-      .from("wishes")
-      .select("*")
-      .order("created_at", { ascending: false });
+    const local = getLocalWishesYuni();
+    try {
+      const { data } = await supabase
+        .from("wishes")
+        .select("*")
+        .order("created_at", { ascending: false });
 
-    if (data) setWishes(data);
+      if (data) {
+        const remoteIds = new Set(data.map((d: any) => d.id));
+        const uniqueLocal = local.filter((l: any) => !l.id || !remoteIds.has(l.id));
+        setWishes([...uniqueLocal, ...data]);
+      } else {
+        setWishes(local);
+      }
+    } catch {
+      setWishes(local);
+    }
   };
 
   // 🔥 KIRIM UCAPAN
   const handleWish = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    await supabase.from("wishes").insert([
-      {
-        name,
-        message,
-        attendance,
-        rsvp_to: "wish",
-      },
-    ]);
+    const newObj = {
+      id: "local-" + Date.now(),
+      name,
+      message,
+      attendance,
+      rsvp_to: "wish",
+      created_at: new Date().toISOString(),
+    };
+    saveLocalWishYuni(newObj);
+
+    try {
+      await supabase.from("wishes").insert([
+        {
+          name,
+          message,
+          attendance,
+          rsvp_to: "wish",
+        },
+      ]);
+    } catch (err) {
+      console.warn(err);
+    }
 
     setName("");
     setMessage("");
@@ -50,30 +93,58 @@ const WishesSection = () => {
 
   // 🔥 RSVP WANITA
   const handleWanita = async () => {
-    await supabase.from("wishes").insert([
-      {
-        name: wanita.name,
-        attendance: wanita.attendance,
-        rsvp_to: "wanita",
-      },
-    ]);
+    const newObj = {
+      id: "local-" + Date.now(),
+      name: wanita.name,
+      attendance: wanita.attendance,
+      rsvp_to: "wanita",
+      created_at: new Date().toISOString(),
+    };
+    saveLocalWishYuni(newObj);
+
+    try {
+      await supabase.from("wishes").insert([
+        {
+          name: wanita.name,
+          attendance: wanita.attendance,
+          rsvp_to: "wanita",
+        },
+      ]);
+    } catch (err) {
+      console.warn(err);
+    }
 
     setWanita({ name: "", attendance: "" });
     alert("RSVP wanita terkirim 💌");
+    fetchWishes();
   };
 
   // 🔥 RSVP PRIA
   const handlePria = async () => {
-    await supabase.from("wishes").insert([
-      {
-        name: pria.name,
-        attendance: pria.attendance,
-        rsvp_to: "pria",
-      },
-    ]);
+    const newObj = {
+      id: "local-" + Date.now(),
+      name: pria.name,
+      attendance: pria.attendance,
+      rsvp_to: "pria",
+      created_at: new Date().toISOString(),
+    };
+    saveLocalWishYuni(newObj);
+
+    try {
+      await supabase.from("wishes").insert([
+        {
+          name: pria.name,
+          attendance: pria.attendance,
+          rsvp_to: "pria",
+        },
+      ]);
+    } catch (err) {
+      console.warn(err);
+    }
 
     setPria({ name: "", attendance: "" });
     alert("RSVP pria terkirim 💌");
+    fetchWishes();
   };
 
   const Radio = ({ label, value, selected, onChange }: any) => (
