@@ -5,8 +5,8 @@
       "destination": "/wedingyuni.html"
     },
     {
-      "source": "/pernikahanaulpika",
-      "destination": "/pernikahanaulpika.html"
+      "source": "/undanganpika",
+      "destination": "/undanganpika.html"
     },
     {
       "source": "/(.*)",
