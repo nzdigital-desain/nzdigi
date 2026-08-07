@@ -5,7 +5,7 @@ import WedingYuni from "@/pages/weding-yuni/pages/Index";
 import SundaPage from "@/pages/template/pages/Index";
 import PernikahanAulPikaPage from "@/pages/pernikahanaulpika/pages/Index";
 import LandingPage from "@/LandingPage";
-import KirimUndangan from "@/pages/weding-yuni/components/KirimUndangan.tsx";
+import KirimUndangan from "@/pages/pernikahanaulpika/components/KirimUndangan.tsx";
 import RedirectNgrok from "./cbtsmpbea";
 
 const queryClient = new QueryClient();
