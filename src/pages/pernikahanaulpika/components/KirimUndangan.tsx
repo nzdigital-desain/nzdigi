@@ -10,7 +10,7 @@ const KirimUndangan = () => {
     }
 
     const link =
-      "https://nzdigi.vercel.app/pernikahanaulpikadan" +
+      "https://nzdigi.vercel.app/pernikahanaulpikadan?to=" +
       encodeURIComponent(guestName);
 
     const message = `Kepada Yth.
