@@ -9,6 +9,10 @@
       "destination": "/undanganpika.html"
     },
     {
+      "source": "/pernikahanaulpika",
+      "destination": "/pernikahanaulpika.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

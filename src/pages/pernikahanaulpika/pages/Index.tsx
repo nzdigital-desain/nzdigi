@@ -48,7 +48,15 @@ const Index = () => {
           content="Undangan pernikahan Pika & Aulia — 23 Agustus 2026."
         />
         <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://nzdigi.vercel.app/images/pernikahanaulpika/cover.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://nzdigi.vercel.app/images/pernikahanaulpika/cover.jpg"
+        />
       </Helmet>
 
       <Shell>
