@@ -97,7 +97,12 @@ export function Rsvp() {
       saveLocalWish(newWish);
 
       try {
-        await supabase.from("rsvps").insert(payload);
+        await supabase.from("rsvps").insert({
+          name: payload.name,
+          status: payload.status,
+          guests: payload.guests,
+          message: payload.message ?? "",
+        });
       } catch (err) {
         console.warn("Supabase insert skipped/offline:", err);
       }
