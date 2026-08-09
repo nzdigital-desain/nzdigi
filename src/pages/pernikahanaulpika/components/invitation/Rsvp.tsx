@@ -24,26 +24,7 @@ const rsvpSchema = z.object({
   message: z.string().trim().max(500, "Ucapan maksimal 500 karakter"),
 });
 
-const LOCAL_STORAGE_KEY = "nzdigi_rsvps_aulpika";
 
-const getLocalWishes = (): Wish[] => {
-  try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch {
-    return [];
-  }
-};
-
-const saveLocalWish = (wish: Wish) => {
-  try {
-    const existing = getLocalWishes();
-    const updated = [wish, ...existing];
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated));
-  } catch (e) {
-    console.error("Failed to save to localStorage", e);
-  }
-};
 
 const formatTime = (iso: string) =>
   new Date(iso).toLocaleString("id-ID", {
@@ -66,46 +47,24 @@ export function Rsvp() {
   const { data: wishes = [], isLoading } = useQuery<Wish[]>({
     queryKey: ["rsvps"],
     queryFn: async () => {
-      const local = getLocalWishes();
-      try {
-        const { data, error: err } = await supabase
-          .from("rsvps")
-          .select("id, name, status, guests, message, created_at")
-          .order("created_at", { ascending: false });
-        if (err || !data) return local;
-
-        const remoteIds = new Set(data.map((d) => d.id));
-        const uniqueLocal = local.filter((l) => !remoteIds.has(l.id));
-        return [...uniqueLocal, ...(data as Wish[])];
-      } catch {
-        return local;
-      }
+      const { data, error: err } = await supabase
+        .from("rsvps")
+        .select("id, name, status, guests, message, created_at")
+        .order("created_at", { ascending: false });
+      if (err || !data) return [];
+      return data as Wish[];
     },
   });
 
   const mutation = useMutation({
     mutationFn: async (payload: z.infer<typeof rsvpSchema>) => {
-      const newWish: Wish = {
-        id: "local-" + Date.now(),
+      const { error: err } = await supabase.from("rsvps").insert({
         name: payload.name,
         status: payload.status,
         guests: payload.guests,
-        message: payload.message,
-        created_at: new Date().toISOString(),
-      };
-
-      saveLocalWish(newWish);
-
-      try {
-        await supabase.from("rsvps").insert({
-          name: payload.name,
-          status: payload.status,
-          guests: payload.guests,
-          message: payload.message ?? "",
-        });
-      } catch (err) {
-        console.warn("Supabase insert skipped/offline:", err);
-      }
+        message: payload.message ?? "",
+      });
+      if (err) throw err;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["rsvps"] });
@@ -116,12 +75,7 @@ export function Rsvp() {
       setDone(true);
     },
     onError: () => {
-      queryClient.invalidateQueries({ queryKey: ["rsvps"] });
-      setName("");
-      setStatus("");
-      setGuests("1");
-      setMessage("");
-      setDone(true);
+      setError("Gagal mengirim konfirmasi. Coba lagi.");
     },
   });
 
