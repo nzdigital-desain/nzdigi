@@ -161,22 +161,27 @@ export const loveStory = [
   {
     image: photos.story1,
     title: "Awal Pertemuan",
-    text: "Tidak ada yang benar-benar kebetulan. Dari sebuah pertemuan sederhana, kami mulai saling mengenal, berbagi cerita, dan menemukan kenyamanan satu sama lain.",
+    text: "Tak pernah ada yang tahu, dari sebuah perkenalan sederhana akan tumbuh sebuah cerita yang begitu berarti. Berawal dari saling mengenal, kami perlahan belajar memahami satu sama lain. Di awal perjalanan, sempat ada keraguan tentang ke mana kisah ini akan membawa kami. Namun, seiring waktu, rasa nyaman tumbuh dan membuat kami ingin terus mengenal lebih jauh.",
   },
   {
     image: photos.story2,
     title: "Menjalin Hubungan",
-    text: "Seiring berjalannya waktu, kebersamaan mengajarkan kami arti cinta, kesabaran, dan saling mendukung dalam setiap langkah kehidupan.",
+    text: "Waktu membawa kami pada keyakinan bahwa pertemuan ini bukan sekadar kebetulan. Kami memilih untuk berjalan bersama, saling mengenal dan memahami lebih dalam. Di antara jarak dan waktu, kami belajar bahwa mencintai bukan hanya tentang selalu dekat, tetapi tentang tetap memilih satu sama lain dalam setiap keadaan. Hingga akhirnya, sebuah niat baik dan keseriusan membawa kami pada langkah yang lebih berarti.",
   },
   {
     image: photos.story3,
     title: "Lamaran",
-    text: "Dengan restu kedua orang tua dan keluarga, kami memutuskan untuk melangkah ke jenjang yang lebih serius sebagai wujud komitmen untuk membangun masa depan bersama.",
+    text: "Ketika hati telah menemukan keyakinannya, langkah berikutnya pun terasa lebih mudah. Dengan doa dan harapan, kami memantapkan niat untuk membawa hubungan ini ke jenjang yang lebih serius. Sebuah momen penuh haru menjadi saksi ketika dua keluarga dipertemukan dalam satu niat baik. Di hari itu, kisah yang awalnya penuh tanda tanya perlahan menemukan jawabannya.",
   },
   {
     image: photos.story4,
     title: "Hari Bahagia",
-    text: "Kini, dengan penuh rasa syukur kepada Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menjadi saksi sekaligus memberikan doa restu pada hari pernikahan kami, sebagai awal dari perjalanan baru dalam ikatan suci pernikahan.",
+    text: "Dengan penuh syukur kepada Allah SWT, kami mengikat janji suci pernikahan.",
+  },
+  {
+    image: photos.story4,
+    title: "Hari Bahagia",
+    text: "Dengan penuh rasa syukur, pada akhirnya pertemuan sederhana itu membawa kami pada satu keyakinan. Semoga langkah ini menjadi awal dari perjalanan panjang yang dipenuhi cinta, keberkahan, dan kebahagiaan. Tak pernah kami sangka, sebuah perkenalan sederhana akan membawa kami sampai di titik ini, saling menemukan, saling memilih, dan akhirnya memutuskan untuk menjalani kehidupan bersama, selamanya.",
   },
 ];
 
