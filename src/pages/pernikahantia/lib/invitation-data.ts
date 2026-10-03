@@ -65,6 +65,7 @@ export const gallery = [
   gallery3,
   gallery4,
   gallery5,
+  gallery6,
   gallery7,
   gallery8,
   gallery9,
