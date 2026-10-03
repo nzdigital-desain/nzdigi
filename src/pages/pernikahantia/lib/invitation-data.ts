@@ -21,6 +21,7 @@ import gallery17 from "../assets/GALLERY-17.JPG";
 import gallery18 from "../assets/GALLERY-18.JPG";
 import gallery19 from "../assets/GALLERY-19.jpg";
 import gallery20 from "../assets/GALLERY-20.jpg";
+import gallery21 from "../assets/GALLERY-21.JPG";
 import musicFile from "../assets/Beautiful In White.mp3";
 
 // ============================================================
@@ -65,7 +66,7 @@ export const gallery = [
   gallery3,
   gallery4,
   gallery5,
-  gallery6,
+  gallery21,
   gallery7,
   gallery8,
   gallery9,
