@@ -19,8 +19,8 @@ import gallery15 from "../assets/GALLERY-15.JPG";
 import gallery16 from "../assets/GALLERY-16.JPG";
 import gallery17 from "../assets/GALLERY-17.JPG";
 import gallery18 from "../assets/GALLERY-18.JPG";
-import gallery19 from "../assets/GALLERY-19.JPG";
-import gallery20 from "../assets/GALLERY-20.JPG";
+import gallery19 from "../assets/GALLERY-19.jpg";
+import gallery20 from "../assets/GALLERY-20.jpg";
 import musicFile from "../assets/Beautiful In White.mp3";
 
 // ============================================================

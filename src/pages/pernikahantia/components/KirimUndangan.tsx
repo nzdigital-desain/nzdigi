@@ -60,10 +60,10 @@ export const KirimUndangan = () => {
     if (typeof window !== "undefined") {
       const origin = window.location.origin;
       if (origin.includes("localhost") || origin.includes("127.0.0.1")) {
-        return `${origin}/pernikahantia`;
+        return `${origin}/momenbahagiatiaagung`;
       }
     }
-    return "https://nzdigi.vercel.app/pernikahantia";
+    return "https://nzdigi.vercel.app/momenbahagiatiaagung";
   });
 
   const [bulkInput, setBulkInput] = useState("");
@@ -253,7 +253,7 @@ export const KirimUndangan = () => {
   return (
     <div className="min-h-screen bg-[#FFFDF9] text-[#4A3525] py-8 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto space-y-6">
-        
+
         {/* Header */}
         <div className="bg-[#FFEED6] border border-[#E5C9A6] rounded-3xl p-6 sm:p-8 text-center shadow-sm">
           <p className="text-[11px] uppercase tracking-[0.25em] text-[#7A522E] font-semibold">
@@ -265,7 +265,7 @@ export const KirimUndangan = () => {
           <p className="mt-2 text-xs sm:text-sm text-[#7A522E] max-w-md mx-auto">
             Generate link undangan banyak sekaligus, kirim otomatis via WhatsApp, dan pantau status terkirim secara praktis.
           </p>
-          
+
           {/* Base URL configuration */}
           <div className="mt-4 inline-flex items-center gap-2 bg-white/80 border border-[#E5C9A6] px-3.5 py-1.5 rounded-full text-xs text-[#5C3A1E]">
             <span className="font-semibold">Link Undangan:</span>
@@ -390,25 +390,22 @@ export const KirimUndangan = () => {
             <div className="flex items-center gap-1 bg-[#FFEED6]/60 p-1 rounded-full text-xs w-full sm:w-auto justify-center">
               <button
                 onClick={() => setFilterTab("all")}
-                className={`px-3 py-1.5 rounded-full font-medium transition ${
-                  filterTab === "all" ? "bg-[#5C3A1E] text-white shadow-sm" : "text-[#7A522E] hover:text-[#5C3A1E]"
-                }`}
+                className={`px-3 py-1.5 rounded-full font-medium transition ${filterTab === "all" ? "bg-[#5C3A1E] text-white shadow-sm" : "text-[#7A522E] hover:text-[#5C3A1E]"
+                  }`}
               >
                 Semua ({guests.length})
               </button>
               <button
                 onClick={() => setFilterTab("pending")}
-                className={`px-3 py-1.5 rounded-full font-medium transition ${
-                  filterTab === "pending" ? "bg-amber-600 text-white shadow-sm" : "text-[#7A522E] hover:text-amber-700"
-                }`}
+                className={`px-3 py-1.5 rounded-full font-medium transition ${filterTab === "pending" ? "bg-amber-600 text-white shadow-sm" : "text-[#7A522E] hover:text-amber-700"
+                  }`}
               >
                 Belum ({guests.length - sentCount})
               </button>
               <button
                 onClick={() => setFilterTab("sent")}
-                className={`px-3 py-1.5 rounded-full font-medium transition ${
-                  filterTab === "sent" ? "bg-emerald-600 text-white shadow-sm" : "text-[#7A522E] hover:text-emerald-700"
-                }`}
+                className={`px-3 py-1.5 rounded-full font-medium transition ${filterTab === "sent" ? "bg-emerald-600 text-white shadow-sm" : "text-[#7A522E] hover:text-emerald-700"
+                  }`}
               >
                 Sudah ({sentCount})
               </button>
@@ -450,19 +447,17 @@ export const KirimUndangan = () => {
             filteredGuests.map((guest, index) => (
               <div
                 key={guest.id}
-                className={`bg-white border rounded-2xl p-4 transition-all duration-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
-                  guest.sent ? "border-emerald-200 bg-emerald-50/20" : "border-[#E5C9A6]"
-                }`}
+                className={`bg-white border rounded-2xl p-4 transition-all duration-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${guest.sent ? "border-emerald-200 bg-emerald-50/20" : "border-[#E5C9A6]"
+                  }`}
               >
                 {/* Info Tamu */}
                 <div className="flex items-start sm:items-center gap-3 min-w-0">
                   <div
                     onClick={() => toggleSent(guest.id)}
-                    className={`size-7 rounded-full shrink-0 flex items-center justify-center cursor-pointer text-xs font-bold transition ${
-                      guest.sent
-                        ? "bg-emerald-600 text-white"
-                        : "border-2 border-slate-300 text-slate-400 hover:border-emerald-500"
-                    }`}
+                    className={`size-7 rounded-full shrink-0 flex items-center justify-center cursor-pointer text-xs font-bold transition ${guest.sent
+                      ? "bg-emerald-600 text-white"
+                      : "border-2 border-slate-300 text-slate-400 hover:border-emerald-500"
+                      }`}
                     title="Klik untuk ubah status sudah/belum kirim"
                   >
                     {guest.sent ? <Check className="size-4" /> : index + 1}
