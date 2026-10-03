@@ -1,11 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+﻿import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import WedingYuni from "@/pages/weding-yuni/pages/Index";
 import SundaPage from "@/pages/template/pages/Index";
 import PernikahanAulPikaPage from "@/pages/pernikahanaulpika/pages/Index";
+import PernikahanTiaPage from "@/pages/pernikahantia/pages/Index";
 import LandingPage from "@/LandingPage";
 import KirimUndangan from "@/pages/pernikahanaulpika/components/KirimUndangan.tsx";
+import KirimUndanganTia from "@/pages/pernikahantia/components/KirimUndangan";
+
 import RedirectNgrok from "./cbtsmpbea";
 
 const queryClient = new QueryClient();
@@ -25,7 +28,11 @@ const App = () => {
             {/* Halaman Template Sunda */}
             <Route path="/sunda" element={<SundaPage />} />
 
-            {/* Halaman Undangan Aul & Pika */}
+            {/* Halaman Undangan */}
+            <Route path="/momenbahagiatiaagung" element={<PernikahanTiaPage />} />
+            <Route path="/momenbahagiatiaagung/kirim" element={<KirimUndanganTia />} />
+            <Route path="/kirim-undangan-tia" element={<KirimUndanganTia />} />
+            <Route path="/kirim-tia" element={<KirimUndanganTia />} />
             <Route path="/pernikahanaulpika" element={<PernikahanAulPikaPage />} />
             <Route path="/pernikahanaulpikadan" element={<PernikahanAulPikaPage />} />
             <Route path="/undanganpika" element={<PernikahanAulPikaPage />} />
@@ -53,3 +60,4 @@ const App = () => {
 
 export default App;
 // fix routing
+
