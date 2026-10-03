@@ -54,7 +54,7 @@ export const photos = {
   story1: gallery7,
   story2: gallery5,
   story3: gallery9,
-  story4: gallery18,
+  story4: gallery10,
   logo: logoAsset,
   bca: bcaAsset,
   gopay: gopayAsset,
