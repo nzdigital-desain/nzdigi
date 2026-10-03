@@ -17,6 +17,9 @@ import gallery12 from "../assets/GALLERY-12.JPG";
 import gallery13 from "../assets/GALLERY-13.JPG";
 import gallery14 from "../assets/GALLERY-14.JPG";
 import gallery15 from "../assets/GALLERY-15.JPG";
+import gallery16 from "../assets/GALLERY-16.JPG";
+import gallery17 from "../assets/GALLERY-17.JPG";
+import gallery18 from "../assets/GALLERY-18.JPG";
 import musicFile from "../assets/Beautiful In White Saxophone Cover by Dori Wirawan.mp3";
 
 const U = "../assets/";
@@ -39,7 +42,7 @@ export const gallery = [
 ];
 
 export const photos = {
-  cover: gallery6,
+  cover: gallery2,
   g2: gallery7,
   g3: gallery8,
   g4: gallery10,
