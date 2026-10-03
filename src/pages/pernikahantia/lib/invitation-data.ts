@@ -96,7 +96,7 @@ export const photos = {
   story1: gallery7,
   story2: gallery5,
   story3: gallery3,
-  story4: gallery6,
+  story4: gallery18,
   logo: logoAsset,
   gopay: gopayAsset,
   music: musicFile,
