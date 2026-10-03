@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState, type ReactNode } from "react";
-import { CalendarPlus, MapPin, Copy, Check, Globe, Phone } from "lucide-react";
+import { CalendarPlus, MapPin, Copy, Check, Globe, Phone, Clock } from "lucide-react";
 
 function InstagramIcon({ size = 20 }: { size?: number }) {
   return (
@@ -146,7 +146,7 @@ export function CountdownSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
         whileTap={{ scale: 0.96 }}
-        href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+${encodeURIComponent(BRIDE_SHORT)}+%26+${encodeURIComponent(GROOM_SHORT)}&dates=${WEDDING_DATE.replace(/[-:]/g, '').replace('T', 'T').slice(0,15)}00Z/${WEDDING_DATE.replace(/[-:]/g, '').replace('T', 'T').slice(0,13)}0000Z&location=${encodeURIComponent(events[0]?.place?.join(', ') ?? '')}`}
+        href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+${encodeURIComponent(BRIDE_SHORT)}+%26+${encodeURIComponent(GROOM_SHORT)}&dates=${WEDDING_DATE.replace(/[-:]/g, '').replace('T', 'T').slice(0, 15)}00Z/${WEDDING_DATE.replace(/[-:]/g, '').replace('T', 'T').slice(0, 13)}0000Z&location=${encodeURIComponent(events[0]?.place?.join(', ') ?? '')}`}
         target="_blank"
         rel="noreferrer"
         className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#5C3A1E] bg-[#5C3A1E] px-6 py-2.5 text-[11px] font-medium tracking-[0.16em] text-white shadow-md transition-all hover:bg-[#7A522E] active:scale-95"
@@ -350,51 +350,134 @@ export function BrideGroom() {
   );
 }
 
-function EventCard({ e }: { e: (typeof events)[number] }) {
+function EventCard({ e, index }: { e: (typeof events)[number]; index: number }) {
+  const isLeft = index % 2 === 0; // Akad: badge kiri | Resepsi: badge kanan
+
+  const badgeRadius = isLeft
+    ? "rounded-tl-[36px] rounded-bl-[36px] sm:rounded-tl-[48px] sm:rounded-bl-[48px]"
+    : "rounded-tr-[36px] rounded-br-[36px] sm:rounded-tr-[48px] sm:rounded-br-[48px]";
+
+  const cardRadius = isLeft
+    ? "rounded-tr-[36px] rounded-br-[36px] sm:rounded-tr-[48px] sm:rounded-br-[48px]"
+    : "rounded-tl-[36px] rounded-bl-[36px] sm:rounded-tl-[48px] sm:rounded-bl-[48px]";
+
   return (
-    <Reveal
-      className="arch-top arch-bottom relative mx-4 overflow-hidden border-2 border-[#E5C9A6] shadow-xl"
-      scale={0.90}
-    >
-      <img
-        src={e.image}
-        alt={e.title}
-        loading="lazy"
-        className="absolute inset-0 size-full object-cover"
-      />
-      <div className="absolute inset-0" style={{ backgroundColor: "rgba(45,25,12,0.70)" }} />
-      <div className="relative px-6 py-16 text-center text-white sm:px-8 sm:py-20">
-        <CapsTitle
-          text={e.title}
-          className="font-serif text-3xl [font-variant:small-caps] text-white drop-shadow sm:text-4xl font-bold"
-          style={{ color: "#FFFFFF" }}
-        />
-        <div className="mt-6 flex items-center justify-center gap-6 text-white">
-          <span className="font-serif text-sm [font-variant:small-caps] sm:text-base text-white/95 font-medium">{e.day}</span>
-          <span className="font-serif text-4xl leading-none text-white drop-shadow sm:text-5xl font-bold">{e.date}</span>
-          <span className="font-serif text-sm [font-variant:small-caps] sm:text-base text-white/95 font-medium">
-            {e.year}
-          </span>
-        </div>
-        <p className="mt-1 font-serif text-lg [font-variant:small-caps] text-[#FFEED6] font-semibold sm:text-xl">{e.month}</p>
-        <p className="mt-6 text-[13px] font-semibold tracking-wide text-white drop-shadow-sm">{e.time}</p>
-        <MapPin className="mx-auto mt-7 size-5 text-[#FFEED6]" />
-        <div className="mt-4 text-[13px] font-normal leading-relaxed text-white/95">
-          <p className="font-semibold text-white">Bertempat di</p>
-          {e.place.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-        </div>
-        <motion.a
-          whileTap={{ scale: 0.96 }}
-          href={MAPS_LINK}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/20 px-6 py-2.5 text-[12px] font-medium text-white backdrop-blur-sm transition-all hover:bg-white/35 active:scale-95"
+    <Reveal className="mx-auto max-w-[460px]">
+      <div className="flex items-stretch gap-2.5 sm:gap-3.5">
+        {/* Badge KIRI — Akad Nikah */}
+        {isLeft && (
+          <div
+            className={`flex w-[18%] min-w-[44px] max-w-[54px] items-center justify-center ${badgeRadius} py-6 shadow-md`}
+            style={{ background: "linear-gradient(180deg, #E5C9A6 0%, #C59B27 100%)" }}
+          >
+            <span className="select-none font-serif text-[11px] sm:text-[19px] uppercase tracking-[0.25em] text-white [writing-mode:vertical-rl] font-bold leading-none">
+              {e.title}
+            </span>
+          </div>
+        )}
+
+        {/* Kartu Utama: Foto di atas + Kotak Teks Putih di bawah */}
+        <div
+          className={`relative flex flex-1 flex-col overflow-hidden ${cardRadius} border border-[#E5C9A6] bg-white shadow-lg`}
         >
-          <MapPin className="size-3.5" />
-          Petunjuk Lokasi
-        </motion.a>
+          {/* Foto Acara di Bagian Atas */}
+          <div className="relative h-56 w-full overflow-hidden sm:h-64">
+            <img
+              src={e.image}
+              alt={e.title}
+              loading="lazy"
+              className="size-full object-cover"
+            />
+          </div>
+
+          {/* Lengkungan Hiasan (Arch Divider) di atas kotak putih */}
+          <div className="relative -mt-5 z-10 w-full overflow-hidden leading-none">
+            <svg
+              viewBox="0 0 300 24"
+              className="block h-5 w-full fill-white sm:h-6"
+              preserveAspectRatio="none"
+            >
+              <path d="M 0,24 L 0,16 C 60,20 120,24 150,4 C 180,24 240,20 300,16 L 300,24 Z" />
+            </svg>
+          </div>
+
+          {/* Kotak Konten Teks Putih persis seperti di gambar */}
+          <div className="bg-white px-4 pb-6 pt-1 sm:px-6 sm:pb-7">
+            {/* Blok Hari, Angka Tanggal Besar & Bulan Tahun di sampingnya */}
+            <div className="flex items-end justify-center gap-3 pt-1 pb-1 sm:gap-5">
+              {/* Kolom Hari & Tanggal Angka Besar */}
+              <div className="flex flex-col items-center">
+                <span className="font-serif text-[10px] sm:text-[13px] uppercase tracking-[0.22em] text-[#5C3A1E] font-medium leading-tight">
+                  {e.day}
+                </span>
+                <span className="font-serif text-3xl sm:text-5xl font-normal leading-none text-[#2D190C] mt-0.5">
+                  {e.date}
+                </span>
+              </div>
+
+              {/* Kolom Bulan & Tahun di sebelah kanan angka tanggal */}
+              <div className="pb-0.5">
+                <span className="font-serif text-xs sm:text-[15px] uppercase tracking-[0.18em] text-[#2D190C] font-normal">
+                  {e.month} {e.year}
+                </span>
+              </div>
+            </div>
+
+            {/* Garis Horizontal Pemisah */}
+            <div className="mx-auto my-3.5 w-4/5 border-t border-[#2D190C]/25" />
+
+            {/* Jam / Waktu Pelaksanaan */}
+            <div className="flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-normal text-[#2D190C]">
+              <Clock className="size-3.5 text-[#5C3A1E]" />
+              <span>{e.time}</span>
+            </div>
+
+            {/* Lokasi / Bertempat di */}
+            <div className="mt-3 text-center">
+              <p className="text-[13px] sm:text-xs text-[#7A522E] font-light">Bertempat di</p>
+              <div className="mt-1 space-y-0.5 text-xs sm:text-[15px] leading-relaxed">
+                {e.place.map((p, idx) => (
+                  <p
+                    key={p}
+                    className={
+                      idx === 0
+                        ? "font-medium text-[#2D190C]"
+                        : "text-[14px] sm:text-xs font-light text-[#4A3525]"
+                    }
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            {/* Tombol Petunjuk Lokasi */}
+            <div className="mt-4 flex justify-center">
+              <motion.a
+                whileTap={{ scale: 0.96 }}
+                href={MAPS_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[#2D190C]/60 bg-white px-5 py-1.5 text-[14px] sm:text-xs font-serif text-[#2D190C] shadow-sm transition-all hover:bg-[#5C3A1E] hover:border-[#5C3A1E] hover:text-white active:scale-95"
+              >
+                <MapPin className="size-4 text-[#5C3A1E]" />
+                Petunjuk Lokasi
+              </motion.a>
+            </div>
+          </div>
+        </div>
+
+        {/* Badge KANAN — Resepsi */}
+        {!isLeft && (
+          <div
+            className={`flex w-[18%] min-w-[44px] max-w-[54px] items-center justify-center ${badgeRadius} py-6 shadow-md`}
+            style={{ background: "linear-gradient(180deg, #E5C9A6 0%, #C59B27 100%)" }}
+          >
+            <span className="select-none font-serif text-[11px] sm:text-[19px] uppercase tracking-[0.25em] text-white [writing-mode:vertical-rl] font-bold leading-none">
+              {e.title}
+            </span>
+          </div>
+        )}
       </div>
     </Reveal>
   );
@@ -406,9 +489,9 @@ export function Events() {
       <Reveal>
         <ScriptTitle text="Wedding Event" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
       </Reveal>
-      <div className="mt-10 space-y-8">
-        {events.map((e) => (
-          <EventCard key={e.title} e={e} />
+      <div className="mt-10 space-y-7 px-3 sm:px-6">
+        {events.map((e, i) => (
+          <EventCard key={e.title} e={e} index={i} />
         ))}
       </div>
     </section>
@@ -616,7 +699,7 @@ export function Closing() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden flex flex-col justify-end">
       <img
-        src={photos.g6}
+        src={photos.g2}
         alt={`${BRIDE_SHORT} dan ${GROOM_SHORT}`}
         loading="lazy"
         className="absolute inset-0 size-full object-cover"

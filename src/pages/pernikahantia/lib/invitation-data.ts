@@ -176,11 +176,6 @@ export const loveStory = [
   {
     image: photos.story4,
     title: "Hari Bahagia",
-    text: "Dengan penuh syukur kepada Allah SWT, kami mengikat janji suci pernikahan.",
-  },
-  {
-    image: photos.story4,
-    title: "Hari Bahagia",
     text: "Dengan penuh rasa syukur, pada akhirnya pertemuan sederhana itu membawa kami pada satu keyakinan. Semoga langkah ini menjadi awal dari perjalanan panjang yang dipenuhi cinta, keberkahan, dan kebahagiaan. Tak pernah kami sangka, sebuah perkenalan sederhana akan membawa kami sampai di titik ini, saling menemukan, saling memilih, dan akhirnya memutuskan untuk menjalani kehidupan bersama, selamanya.",
   },
 ];

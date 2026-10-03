@@ -131,7 +131,7 @@ export function Rsvp() {
           Mohon memilih status kehadiran Anda terlebih dahulu di bawah ini:
         </p>
 
-        {/* 1. Status Kehadiran (Muncul pertama kali) */}
+        {/* Status Kehadiran */}
         <label className="mt-6 block text-sm font-medium text-[#5C3A1E]">
           Status Kehadiran <span className="text-[#5C3A1E]">*</span>
         </label>
@@ -148,74 +148,59 @@ export function Rsvp() {
           <option value="Tidak Hadir">Tidak Hadir</option>
         </select>
 
-        {/* 2. Form Nama Lengkap, Jumlah Tamu, dan Ucapan HANYA muncul setelah status kehadiran dipilih */}
-        <AnimatePresence>
-          {status && (
-            <motion.div
-              initial={{ opacity: 0, height: 0, y: -10 }}
-              animate={{ opacity: 1, height: "auto", y: 0 }}
-              exit={{ opacity: 0, height: 0, y: -10 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="overflow-hidden"
+        {/* Nama Lengkap */}
+        <label className="mt-4 block text-sm font-medium text-[#5C3A1E]">
+          Nama Lengkap <span className="text-[#5C3A1E]">*</span>{" "}
+          <span className="text-xs text-slate-400">({name.length}/100)</span>
+        </label>
+        <input
+          value={name}
+          maxLength={100}
+          placeholder="Masukkan nama lengkap Anda"
+          onChange={(e) => setName(e.target.value)}
+          className="mt-2 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-[#5C3A1E] text-slate-800"
+        />
+
+        {/* Jumlah Tamu — hanya saat Hadir */}
+        {status === "Hadir" && (
+          <>
+            <label className="mt-4 block text-sm font-medium text-[#5C3A1E]">Jumlah Tamu</label>
+            <select
+              value={guests}
+              onChange={(e) => setGuests(e.target.value)}
+              className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-[#5C3A1E] text-slate-800"
             >
-              <label className="mt-4 block text-sm font-medium text-[#5C3A1E]">
-                Nama Lengkap <span className="text-[#5C3A1E]">*</span>{" "}
-                <span className="text-xs text-slate-400">({name.length}/100)</span>
-              </label>
-              <input
-                value={name}
-                maxLength={100}
-                placeholder="Masukkan nama lengkap Anda"
-                onChange={(e) => setName(e.target.value)}
-                className="mt-2 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-[#5C3A1E] text-slate-800"
-              />
+              <option value="1">1 Orang</option>
+              <option value="2">2 Orang</option>
+              <option value="3">3 Orang</option>
+            </select>
+          </>
+        )}
 
-              {status === "Hadir" && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.25 }}
-                >
-                  <label className="mt-4 block text-sm font-medium text-[#5C3A1E]">Jumlah Tamu</label>
-                  <select
-                    value={guests}
-                    onChange={(e) => setGuests(e.target.value)}
-                    className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-[#5C3A1E] text-slate-800"
-                  >
-                    <option value="1">1 Orang</option>
-                    <option value="2">2 Orang</option>
-                    <option value="3">3 Orang</option>
-                  </select>
-                </motion.div>
-              )}
+        {/* Ucapan */}
+        <label className="mt-4 block text-sm font-medium text-[#5C3A1E]">
+          Ucapan/Pesan <span className="text-xs text-slate-400">({message.length}/500)</span>
+        </label>
+        <textarea
+          value={message}
+          maxLength={500}
+          rows={4}
+          placeholder="Tulis ucapan atau pesan Anda..."
+          onChange={(e) => setMessage(e.target.value)}
+          className="mt-2 w-full resize-none rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-[#5C3A1E] text-slate-800"
+        />
 
-              <label className="mt-4 block text-sm font-medium text-[#5C3A1E]">
-                Ucapan/Pesan <span className="text-xs text-slate-400">({message.length}/500)</span>
-              </label>
-              <textarea
-                value={message}
-                maxLength={500}
-                rows={4}
-                placeholder="Tulis ucapan atau pesan Anda..."
-                onChange={(e) => setMessage(e.target.value)}
-                className="mt-2 w-full resize-none rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-[#5C3A1E] text-slate-800"
-              />
+        {error && <p className="mt-3 text-center text-sm text-red-600">{error}</p>}
 
-              {error && <p className="mt-3 text-center text-sm text-red-600">{error}</p>}
-
-              <div className="mt-6 text-center">
-                <button
-                  type="submit"
-                  disabled={mutation.isPending}
-                  className="rounded-full bg-[#5C3A1E] px-8 py-2.5 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#7A522E] active:scale-95 disabled:opacity-60"
-                >
-                  {mutation.isPending ? "Mengirim..." : "Kirim Konfirmasi"}
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div className="mt-6 text-center">
+          <button
+            type="submit"
+            disabled={mutation.isPending}
+            className="rounded-full bg-[#5C3A1E] px-8 py-2.5 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#7A522E] active:scale-95 disabled:opacity-60"
+          >
+            {mutation.isPending ? "Mengirim..." : "Kirim Konfirmasi"}
+          </button>
+        </div>
 
         {done && !error && (
           <p className="mt-4 text-center text-sm text-emerald-600 font-medium">
