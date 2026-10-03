@@ -17,6 +17,10 @@
       "destination": "/pernikahanaulpika.html"
     },
     {
+      "source": "/momenbahagiatiaagung",
+      "destination": "/momenbahagiatiaagung.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

@@ -1,4 +1,4 @@
-﻿import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import WedingYuni from "@/pages/weding-yuni/pages/Index";
@@ -30,9 +30,11 @@ const App = () => {
 
             {/* Halaman Undangan */}
             <Route path="/momenbahagiatiaagung" element={<PernikahanTiaPage />} />
+            <Route path="/pernikahantia" element={<PernikahanTiaPage />} />
             <Route path="/momenbahagiatiaagung/kirim" element={<KirimUndanganTia />} />
             <Route path="/kirim-undangan-tia" element={<KirimUndanganTia />} />
             <Route path="/kirim-tia" element={<KirimUndanganTia />} />
+            <Route path="/pernikahantia/kirim" element={<KirimUndanganTia />} />
             <Route path="/pernikahanaulpika" element={<PernikahanAulPikaPage />} />
             <Route path="/pernikahanaulpikadan" element={<PernikahanAulPikaPage />} />
             <Route path="/undanganpika" element={<PernikahanAulPikaPage />} />

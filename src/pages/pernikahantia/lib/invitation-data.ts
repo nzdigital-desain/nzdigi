@@ -182,7 +182,7 @@ export const loveStory = [
 export const turutMengundang = {
   wanita: [
     "1. Bpk. Ujang Ma'mun, S.Fil.I., M.H. (Kades Palasari Girang)",
-    "2. Ibu Hj. Nuryamah Ma'mun, S.E., M.H. (Kordiv. P2H Bawaslu Jabar)",
+    "2. Ibu Hj. Nuryamah Ma'mun, S.E., M.H. (Pimpinan Bawaslu Jabar)",
     "3. KH. Harun Arrasyid, A.Md. (Ketua Yayasan Baet El-Anshar)",
     "4. Dr. Hj. Sri Rahayu Pudjiastuti, M.Pd. (Pembina Pondok Pesantren Nurul Huda, Depok)",
     "5. Bpk. Agus Yusuf Ibrahim, M.Si. (Ket. FKPQ Kab. Sukabumi)",
