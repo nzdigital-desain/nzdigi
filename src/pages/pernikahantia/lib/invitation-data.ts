@@ -46,7 +46,7 @@ export const BRIDE_FATHER = "Bapak Tatang Kuswandi (Ateng)";
 export const BRIDE_MOTHER = "Ibu Nining Yuningsih (Ening)";
 
 /** Ayah mempelai pria */
-export const GROOM_FATHER = "Bapak Dr. Subkhan, M.Pd.";
+export const GROOM_FATHER = "Dr. Muhamad Subkhan, M.Pd";
 
 /** Ibu mempelai pria */
 export const GROOM_MOTHER = "Ibu Giyanti";
@@ -182,19 +182,19 @@ export const loveStory = [
 export const turutMengundang = {
   wanita: [
     "1. Bpk. Ujang Ma'mun, S.Fil.I., M.H. (Kades Palasari Girang)",
-    "2. Ibu Hj. Nuryamah Ma'mun, S.E., M.H. (Bawaslu Jabar)",
+    "2. Ibu Hj. Nuryamah Ma'mun, S.E., M.H. (Kordiv. P2H Bawaslu Jabar)",
     "3. KH. Harun Arrasyid, A.Md. (Ketua Yayasan Baet El-Anshar)",
-    "4. Dr. Hj. Sri Rahayu Pudjiastuti, M.Pd. (Pembina YAPMA Nurul Huda Depok)",
-    "5. Kel. Besar YAPMA Nurul Huda Depok",
-    "6. Kel. Besar Abdurohman (Alm)",
-    "7. Kel. Besar Abah Mamad (Alm)",
-    "8. Kel. Besar Bpk Dindin / Ibu Elih",
-    "9. Kel. Besar Bpk Baen / Ibu Anin",
-    "10. Bpk. Agus Yusuf Ibrahim, M.Si. (Ket. PC MPSI)",
-    "11. Bpk. Gugun Guntara, J.P., S.Pd. (Kep. SPPG Pulosari)",
-    "12. Ibu Hj. Rina Rahman (Pimp. Travel Nusantara Ilhami)",
-    "13. Bpk. Pian Sopian (Ket. RT 11)",
-    "14. Bpk. D. Suhenda, M.Pd. (Ket. RW 03)",
+    "4. Dr. Hj. Sri Rahayu Pudjiastuti, M.Pd. (Pembina Pondok Pesantren Nurul Huda, Depok)",
+    "5. Bpk. Agus Yusuf Ibrahim, M.Si. (Ket. FKPQ Kab. Sukabumi)",
+    "6. Bpk. Gugun Guntara, J.P., S.Pd. (Kep. SPPG Pulosari)",
+    "7. Ibu Eli Yulianti Sa'dilah, S.Pd. (Ket. Himpaudi Kec. Kalapanunggal)",
+    "8. Bpk. D. Suhenda, M.Pd. (Ket. Cabang SI Kalapanunggal)",
+    "9. Bpk. Pian Supriani (Ket. RT 11)",
+    "10. Kel. Besar BPD Palasari Girang",
+    "11. Kel. Besar Abdul Rohman (Alm)",
+    "12. Kel. Besar Abah Mamad (Alm)",
+    "13. Kel. Besar Bpk Dindin / Ibu Elih",
+    "14. Kel. Besar Bpk Baen / Ibu Anin",
     "15. Rival (Kakak)",
     "16. Teguh (Kakak Sepupu)",
   ],
