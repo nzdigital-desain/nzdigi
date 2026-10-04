@@ -368,9 +368,9 @@ function EventCard({ e, index }: { e: (typeof events)[number]; index: number }) 
         {isLeft && (
           <div
             className={`flex w-[18%] min-w-[44px] max-w-[54px] items-center justify-center ${badgeRadius} py-6 shadow-md`}
-            style={{ background: "linear-gradient(180deg, #E5C9A6 0%, #C59B27 100%)" }}
+            style={{ background: "linear-gradient(180deg, #d7923eb6 0%, #604b11ff 100%)" }}
           >
-            <span className="select-none font-serif text-[15px] sm:text-[19px] uppercase tracking-[0.25em] text-white [writing-mode:vertical-rl] font-bold leading-none">
+            <span className="select-none font-serif text-[19px] sm:text-[19px] uppercase tracking-[0.25em] text-white [writing-mode:vertical-rl] font-bold leading-none">
               {e.title}
             </span>
           </div>
@@ -471,7 +471,7 @@ function EventCard({ e, index }: { e: (typeof events)[number]; index: number }) 
         {!isLeft && (
           <div
             className={`flex w-[18%] min-w-[44px] max-w-[54px] items-center justify-center ${badgeRadius} py-6 shadow-md`}
-            style={{ background: "linear-gradient(180deg, #E5C9A6 0%, #C59B27 100%)" }}
+            style={{ background: "linear-gradient(180deg, #d7923eb6 0%, #604b11ff 100%)" }}
           >
             <span className="select-none font-serif text-[15px] sm:text-[19px] uppercase tracking-[0.25em] text-white [writing-mode:vertical-rl] font-bold leading-none">
               {e.title}
