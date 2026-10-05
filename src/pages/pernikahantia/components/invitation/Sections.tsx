@@ -58,6 +58,42 @@ export function ScriptTitle({ text, className = "", style }: { text: string; cla
   );
 }
 
+export function SectionHeader({
+  title,
+  className = "",
+}: {
+  title: string;
+  className?: string;
+}) {
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <div className="flex items-center justify-center gap-2 sm:gap-3.5">
+        {/* Ornamen Garis Kiri Emas */}
+        <div className="flex items-center gap-1.5 opacity-85">
+          <span className="h-[1px] w-5 sm:w-10 bg-gradient-to-r from-transparent to-[#C59B27]" />
+          <span className="size-1.5 rotate-45 bg-[#C59B27]" />
+        </div>
+
+        {/* Badge Bentuk Resepsi / Asimetris Elegan */}
+        <div
+          className="relative inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3 rounded-tl-[24px] rounded-br-[24px] rounded-tr-[7px] rounded-bl-[7px] shadow-md border border-[#F3BE6C]/70"
+          style={{ background: "linear-gradient(135deg, #d7923eb6 0%, #604b11ff 100%)" }}
+        >
+          <span className="select-none font-serif text-[14px] sm:text-[16px] uppercase tracking-[0.24em] text-[#FFFDF9] font-bold leading-none drop-shadow">
+            {title}
+          </span>
+        </div>
+
+        {/* Ornamen Garis Katuhu Emas */}
+        <div className="flex items-center gap-1.5 opacity-85">
+          <span className="size-1.5 rotate-45 bg-[#C59B27]" />
+          <span className="h-[1px] w-5 sm:w-10 bg-gradient-to-l from-transparent to-[#C59B27]" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function CapsTitle({ text, className = "", style }: { text: string; className?: string; style?: React.CSSProperties }) {
   return (
     <span data-text={text} className={`ghost-caps font-display tracking-[0.14em] ${className}`} style={style}>
@@ -116,7 +152,7 @@ export function CountdownSection() {
   return (
     <section className="bg-[#FFEED6] px-4 py-14 text-center sm:px-6">
       <Reveal>
-        <ScriptTitle text="Count The Date" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Count The Date" />
         <p className="mt-2 font-display text-[11px] uppercase tracking-[0.2em] text-[#7A522E] font-medium">
           Menuju Hari Bahagia
         </p>
@@ -217,7 +253,7 @@ export function BrideGroom() {
       </div>
 
       <Reveal>
-        <ScriptTitle text="Bride & Groom" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Bride & Groom" />
       </Reveal>
 
       <Reveal delay={0.1}>
@@ -487,7 +523,7 @@ export function Events() {
   return (
     <section id="wedding-event" className="bg-[#FFEED6] px-5 py-14 text-center sm:px-6 sm:py-16">
       <Reveal>
-        <ScriptTitle text="Wedding Event" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Wedding Event" />
       </Reveal>
       <div className="mt-10 space-y-7 px-3 sm:px-6">
         {events.map((e, i) => (
@@ -502,7 +538,7 @@ export function DressCode() {
   return (
     <section className="bg-theme-light px-5 py-14 text-center sm:px-6">
       <Reveal>
-        <ScriptTitle text="Dress Code" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Dress Code" />
         <p className="mx-auto mt-4 max-w-xs text-[12px] leading-relaxed text-[#4A3525]">
           Untuk menambah keindahan acara, mohon berkenan mengenakan busana dengan pilihan warna berikut :
         </p>
@@ -530,7 +566,7 @@ export function LiveStreaming() {
   return (
     <section className="bg-[#FFEED6] px-5 py-14 text-center sm:px-6">
       <Reveal>
-        <ScriptTitle text="Live Streaming" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Live Streaming" />
       </Reveal>
       <Reveal delay={0.1}>
         <p className="mx-auto mt-4 max-w-sm text-[12px] leading-relaxed text-[#4A3525]">
@@ -554,7 +590,7 @@ export function LoveStory() {
   return (
     <section className="bg-[#FFEED6] px-5 py-14 text-center sm:px-6 sm:py-16">
       <Reveal>
-        <ScriptTitle text="Love Story" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Love Story" />
       </Reveal>
       <div className="mt-10 space-y-10">
         {loveStory.map((s, i) => (
@@ -581,7 +617,7 @@ export function TurutMengundang() {
   return (
     <section className="bg-[#FFEED6] px-5 py-14 text-center sm:px-6 sm:py-16">
       <Reveal>
-        <ScriptTitle text="Turut Mengundang" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Turut Mengundang" />
       </Reveal>
       <div className="mt-9 space-y-5">
         <GuestList title="" list={turutMengundang.wanita} />
@@ -596,7 +632,7 @@ export function Gallery() {
   return (
     <section id="gallery" className="bg-[#FFEED6] px-5 py-14 text-center sm:px-6 sm:py-16">
       <Reveal>
-        <ScriptTitle text="Our Gallery" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Our Gallery" />
       </Reveal>
       <div className="mt-9 grid grid-cols-2 gap-3">
         {gallery.map((g, i) => (
@@ -652,7 +688,7 @@ export function Gift() {
   return (
     <section id="gift" className="bg-theme-light px-5 py-14 text-center sm:px-6 sm:py-16">
       <Reveal>
-        <ScriptTitle text="Wedding Gift" className="text-3xl sm:text-4xl text-[#5C3A1E]" style={{ color: "#5C3A1E" }} />
+        <SectionHeader title="Wedding Gift" />
       </Reveal>
       <p className="mx-auto mt-6 max-w-xs text-[12px] leading-relaxed text-[#4A3525]">
         Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah

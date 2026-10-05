@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { z } from "zod";
-import { ScriptTitle } from "./Sections";
+import { ScriptTitle, SectionHeader } from "./Sections";
 import { photos } from "../../lib/invitation-data";
 import { Reveal } from "./Reveal";
 import { supabase } from "../../integrations/supabase/client";
@@ -103,10 +103,7 @@ export function Rsvp() {
   return (
     <section id="rsvp" className="bg-[#FFFDF9] px-5 py-14 sm:px-6 sm:py-16">
       <Reveal className="text-center">
-        <ScriptTitle text="Konfirmasi Kehadiran" className="text-[#5C3A1E] text-3xl sm:text-4xl" style={{ color: "#5C3A1E" }} />
-        <div className="mt-1">
-          <ScriptTitle text="& Ucapan" className="text-[#5C3A1E] text-3xl sm:text-4xl" style={{ color: "#5C3A1E" }} />
-        </div>
+        <SectionHeader title="Konfirmasi Kehadiran" />
       </Reveal>
 
       <Reveal className="mt-8 grid grid-cols-4 gap-2 text-center" delay={0.1}>
