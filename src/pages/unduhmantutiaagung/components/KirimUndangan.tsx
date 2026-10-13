@@ -46,7 +46,7 @@ Dalam acara Tasyakuran Ngunduh Mantu setelah Pernikahan Anak Anak Kami:
 Mas Nukha Agung Firdaus, A.Md, S.Pd dengan Teteh Tia Mutiara, S.Pd
 
 Untuk informasi lengkap mengenai acara Tasyakuran ini, silahkan kunjungi link undangan digital kami di bawah ini :
-*{link}*
+{link}
 
 Kehadiran Bapak/Ibu/Saudara/i merupakan suatu kehormatan dan kebahagiaan bagi kami Sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
 Atas kehadiran dan doa restunya kami ucapkan terima kasih.
@@ -59,7 +59,7 @@ Kel. Bapak Tatang Kuswandi & Ibu Nining Yuningsih
 Mas Nukha Agung Firdaus, A.Md, S.Pd & Teteh Tia Mutiara, S.Pd`;
 
 const STORAGE_KEY_GUESTS = "unduhmantu_tia_agung_guests_list";
-const STORAGE_KEY_TEMPLATE = "unduhmantu_tia_agung_msg_template_v2";
+const STORAGE_KEY_TEMPLATE = "unduhmantu_tia_agung_msg_template_v3";
 
 export const KirimUndangan = () => {
   // Base URL undangan
