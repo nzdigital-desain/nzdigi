@@ -21,6 +21,10 @@
       "destination": "/momenbahagiatiaagung.html"
     },
     {
+      "source": "/unduhmantutiaagung",
+      "destination": "/unduhmantutiaagung.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
