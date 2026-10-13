@@ -42,8 +42,16 @@
 
     <script>
       const params = window.location.search; // ambil ?to=...
-      window.location.replace("/unduhmantu" + params);
+      window.location.href = "/unduhmantu" + params;
     </script>
   </head>
-  <body></body>
+  <body>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; font-family: sans-serif; text-align: center; padding: 20px;">
+      <h2 style="color: #5C3A1E; margin-bottom: 8px;">Undangan Tasyakuran Ngunduh Mantu</h2>
+      <p style="color: #7A522E; margin-top: 0;">Mas Agung &amp; Teteh Tia</p>
+      <img src="https://nzdigi.vercel.app/images/unduhmantutiaagung/cover.jpg" alt="Cover Mas Agung & Teteh Tia" style="width: 240px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin: 16px auto;" />
+      <p style="font-size: 14px; color: #666;">Memuat undangan digital...</p>
+      <p><a href="/unduhmantu" style="color: #5C3A1E; text-decoration: underline; font-size: 13px;">Klik di sini jika tidak dialihkan otomatis</a></p>
+    </div>
+  </body>
 </html>

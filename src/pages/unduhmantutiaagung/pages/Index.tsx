@@ -52,8 +52,23 @@ const Index = () => {
         />
         <meta property="og:type" content="website" />
         <meta
+          property="og:image"
+          content="https://nzdigi.vercel.app/images/unduhmantutiaagung/cover.jpg"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://nzdigi.vercel.app/images/unduhmantutiaagung/cover.jpg"
+        />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="1200" />
+        <meta
           name="twitter:card"
           content="summary_large_image"
+        />
+        <meta
+          name="twitter:image"
+          content="https://nzdigi.vercel.app/images/unduhmantutiaagung/cover.jpg"
         />
       </Helmet>
 
