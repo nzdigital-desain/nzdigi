@@ -29,30 +29,37 @@ interface Guest {
   sentAt?: string;
 }
 
-const DEFAULT_TEMPLATE = `Kepada Yth.
+const DEFAULT_TEMPLATE = `Undangan Tasyakuran Ngunduh Mantu
+Sabtu Legi, 14 November 2026
+
+Kepada Yth
 Bapak/Ibu/Saudara/i
 *{nama}*
+Di Tempat
 
-_Assalamualaikum Warahmatullahi Wabarakaatuh_
-Dengan memohon rahmat dan ridho Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami :
+Bismillahirrohmaanirrokhhim
+Assalaamu’alaikum Warohmatullohi Wabarokaatuh
+Segala Puji dan Syukur hanyalah untuk Allah SWT, Sholawat teriring salam teruntuk Penghulu alam Kanjeng Nabi Muhammad SAW.
+Perkenankan Kami sekeluarga untuk mengundang Kepada Bapak/Ibu/Saudara/i
+Dalam acara Tasyakuran Ngunduh Mantu setelah Pernikahan Anak Anak Kami:
 
-👰🏻 *${BRIDE_FULL}*
-dengan
-🤵🏻 *${GROOM_FULL}*
+Mas Nukha Agung Firdaus, A.Md, S.Pd dengan Teteh Tia Mutiara, S.Pd
 
-Untuk informasi detail mengenai acara, silahkan kunjungi link undangan digital kami di bawah ini :
+Untuk informasi lengkap mengenai acara Tasyakuran ini, silahkan kunjungi link undangan digital kami di bawah ini :
 *{link}*
 
-Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+Kehadiran Bapak/Ibu/Saudara/i merupakan suatu kehormatan dan kebahagiaan bagi kami Sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
 Atas kehadiran dan doa restunya kami ucapkan terima kasih.
 
 Wassalamualaikum Warahmatullahi Wabarakaatuh
+Hormat Kami
 
-Hormat kami,
-${BRIDE_SHORT} & ${GROOM_SHORT}`;
+Kel. Bapak Dr. Muhamad Subkhan, M.Pd & Ibu Giyanti
+Kel. Bapak Tatang Kuswandi & Ibu Nining Yuningsih
+Mas Nukha Agung Firdaus, A.Md, S.Pd & Teteh Tia Mutiara, S.Pd`;
 
-const STORAGE_KEY_GUESTS = "tia_agung_guests_list";
-const STORAGE_KEY_TEMPLATE = "tia_agung_msg_template";
+const STORAGE_KEY_GUESTS = "unduhmantu_tia_agung_guests_list";
+const STORAGE_KEY_TEMPLATE = "unduhmantu_tia_agung_msg_template_v2";
 
 export const KirimUndangan = () => {
   // Base URL undangan
@@ -60,10 +67,10 @@ export const KirimUndangan = () => {
     if (typeof window !== "undefined") {
       const origin = window.location.origin;
       if (origin.includes("localhost") || origin.includes("127.0.0.1")) {
-        return `${origin}/momenbahagiatiaagung`;
+        return `${origin}/unduhmantutiaagung`;
       }
     }
-    return "https://nzdigi.vercel.app/momenbahagiatiaagung";
+    return "https://nzdigi.vercel.app/unduhmantutiaagung";
   });
 
   const [bulkInput, setBulkInput] = useState("");
@@ -257,10 +264,10 @@ export const KirimUndangan = () => {
         {/* Header */}
         <div className="bg-[#FFEED6] border border-[#E5C9A6] rounded-3xl p-6 sm:p-8 text-center shadow-sm">
           <p className="text-[11px] uppercase tracking-[0.25em] text-[#7A522E] font-semibold">
-            PENGELOLA UNDANGAN PERNIKAHAN
+            PENGELOLA UNDANGAN TASYAKURAN NGUNDUH MANTU
           </p>
           <h1 className="mt-2 text-2xl sm:text-3xl font-serif font-bold text-[#5C3A1E]">
-            {BRIDE_SHORT} &amp; {GROOM_SHORT}
+            Mas Agung &amp; Teteh Tia
           </h1>
           <p className="mt-2 text-xs sm:text-sm text-[#7A522E] max-w-md mx-auto">
             Generate link undangan banyak sekaligus, kirim otomatis via WhatsApp, dan pantau status terkirim secara praktis.
