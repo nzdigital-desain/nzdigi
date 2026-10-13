@@ -1,0 +1,122 @@
+/* ============================================================
+   Design system — Ocean Deep Theme
+   Struktur, font, dan warna: inviglory.id/exclusive-oceandeep/
+   SEMUA ATURAN DI-SCOPE KE .tia-theme AGAR TIDAK BOCOR KE AUL PIKA
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Sacramento&display=swap');
+
+/* ── Typography Scoped to Tia Theme ───────── */
+.tia-theme .font-display   { font-family: 'Cinzel', serif; }
+.tia-theme .font-serif     { font-family: 'Cormorant Garamond', serif; }
+.tia-theme .font-script    { font-family: 'Sacramento', cursive; }
+.tia-theme .font-caps      { font-family: 'Cinzel Decorative', serif; }
+.tia-theme .font-body      { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.tia-theme {
+  /* ── Exact Ocean Deep Palette ─────────────────────────── */
+  --ocean-navy:   #1F395C !important;   /* Deep Navy  — Primary dark background, cards, buttons */
+  --ocean-steel:  #629FBE !important;   /* Steel Blue — Accent, gradient mid */
+  --ocean-teal:   #0F384A !important;   /* Ocean Teal — Darkest overlay */
+  --ocean-gold:   #F3BE6C !important;   /* Warm Gold  — Highlight, ring border, divider */
+  --ocean-cream:  #F8F7F7 !important;   /* Off-white  — Light section background */
+  --ocean-soft:   #E8F0F4 !important;   /* Soft slate mist */
+  --ocean-ink:    #2F2F2F !important;   /* Dark text on light background */
+
+  /* ── Semantic aliases (hanya untuk Tia) */
+  --blush:        #1F395C !important;
+  --blush-soft:   #E8F0F4 !important;
+  --blush-deep:   #1F395C !important;
+  --blush-muted:  #F3BE6C !important;
+  --ink:          #2F2F2F !important;
+  --cream:        #F8F7F7 !important;
+  --sage-olive:   #629FBE !important;
+
+  /* ── Gradients ───────────────────────────────────────── */
+  --gradient-blush: linear-gradient(
+    180deg,
+    rgba(31, 57, 92, 0) 0%,
+    rgba(15, 56, 74, 0.92) 100%
+  ) !important;
+
+  --gradient-ocean-deep: linear-gradient(
+    180deg,
+    #1F395C 0%,
+    #629FBE 100%
+  ) !important;
+
+  --gradient-ring: linear-gradient(
+    160deg,
+    #1F395C,
+    #629FBE
+  ) !important;
+
+  --shadow-soft: 0 10px 30px -12px rgba(31, 57, 92, 0.35);
+}
+
+/* ── Background helpers — HANYA di dalam .tia-theme ── */
+.tia-theme .bg-blush       { background-color: var(--blush) !important; }
+.tia-theme .bg-blush-soft  { background-color: var(--blush-soft) !important; }
+.tia-theme .bg-blush-deep  { background-color: var(--blush-deep) !important; }
+.tia-theme .bg-cream       { background-color: var(--cream) !important; }
+.tia-theme .bg-sage        { background-color: var(--sage-olive) !important; }
+.tia-theme .bg-dusty-rose  { background-color: var(--blush) !important; }
+
+/* ── Text helpers — HANYA di dalam .tia-theme ── */
+.tia-theme .text-blush      { color: var(--blush-soft) !important; }
+.tia-theme .text-blush-soft { color: var(--blush-soft) !important; }
+.tia-theme .text-blush-deep { color: var(--theme-text-dark, var(--blush-deep)) !important; }
+.tia-theme .text-cream      { color: var(--cream) !important; }
+.tia-theme .text-ink        { color: var(--ink) !important; }
+.tia-theme .text-sage       { color: var(--sage-olive) !important; }
+.tia-theme .text-gold       { color: var(--blush-muted) !important; }
+
+/* ── Border helpers — HANYA di dalam .tia-theme ── */
+.tia-theme .border-blush-soft { border-color: var(--blush-soft) !important; }
+.tia-theme .border-blush-deep { border-color: var(--theme-text-dark, var(--blush-deep)) !important; }
+.tia-theme .border-sage       { border-color: var(--sage-olive) !important; }
+.tia-theme .border-gold       { border-color: var(--blush-muted) !important; }
+
+/* ── Script title — Scoped ke Tia ──────────────────────────── */
+.tia-theme .script-title {
+  position: relative;
+  font-family: 'Sacramento', cursive;
+  line-height: 1;
+  display: inline-block;
+}
+.tia-theme .script-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0.12em;
+  top: 0.16em;
+  opacity: 0.20;
+  color: inherit;
+  filter: blur(0.3px);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ── Ghost caps ─────────────────────────────────────────── */
+.tia-theme .ghost-caps {
+  position: relative;
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+}
+.tia-theme .ghost-caps::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0.05em;
+  top: 0.16em;
+  opacity: 0.18;
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* ── Arch border radius (event cards) ───────────────────── */
+.tia-theme .arch-top {
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+}
+.tia-theme .arch-bottom {
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}

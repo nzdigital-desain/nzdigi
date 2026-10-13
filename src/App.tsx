@@ -5,6 +5,8 @@ import WedingYuni from "@/pages/weding-yuni/pages/Index";
 import SundaPage from "@/pages/template/pages/Index";
 import PernikahanAulPikaPage from "@/pages/pernikahanaulpika/pages/Index";
 import PernikahanTiaPage from "@/pages/pernikahantia/pages/Index";
+import UnduhMantuTiaAgung from "@/pages/unduhmantutiaagung/pages/Index";
+import KirimUndanganUnduhMantu from "@/pages/unduhmantutiaagung/components/KirimUndangan";
 import LandingPage from "@/LandingPage";
 import KirimUndangan from "@/pages/pernikahanaulpika/components/KirimUndangan.tsx";
 import KirimUndanganTia from "@/pages/pernikahantia/components/KirimUndangan";
@@ -35,6 +37,12 @@ const App = () => {
             <Route path="/kirim-undangan-tia" element={<KirimUndanganTia />} />
             <Route path="/kirim-tia" element={<KirimUndanganTia />} />
             <Route path="/pernikahantia/kirim" element={<KirimUndanganTia />} />
+            {/* Halaman Unduh Mantu Mas Agung & Teteh Tia */}
+            <Route path="/unduhmantutiaagung" element={<UnduhMantuTiaAgung />} />
+            <Route path="/unduhmantu" element={<UnduhMantuTiaAgung />} />
+            <Route path="/tasyakuran" element={<UnduhMantuTiaAgung />} />
+            <Route path="/unduhmantutiaagung/kirim" element={<KirimUndanganUnduhMantu />} />
+            <Route path="/kirim-unduhmantu" element={<KirimUndanganUnduhMantu />} />
             <Route path="/pernikahanaulpika" element={<PernikahanAulPikaPage />} />
             <Route path="/pernikahanaulpikadan" element={<PernikahanAulPikaPage />} />
             <Route path="/undanganpika" element={<PernikahanAulPikaPage />} />
